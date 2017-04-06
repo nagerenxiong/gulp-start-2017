@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>网龄回馈活动</title>
+    <link rel="stylesheet" type="text/css" href="../css/wangling20170324zx.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-wrap">
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <h1>网龄回馈活动</h1>
+        </div>
+    </div>
+
+
+    <div class="uptop">
+        <div class="beibei1">
+            <img src="../images/wangling/wl_03.png" />
+        </div>
+        <div class="beibei2">
+            <img src="../images/wangling/wl_06.png" />
+        </div>
+        <div class="beibei3">
+            <img src="../images/wangling/wl_25.png" />
+        </div>
+        <div class="beibei4">
+            <img src="../images/wangling/wl_30.png" />
+        </div>
+        <div class="wlindex">
+            <div class="text">
+                <p>您的号码是：151****8551</p>
+                <p>网龄<b>8</b>年</p>
+            </div>
+        </div>
+        <div class="cbutton">领取 <b>9</b> 次抽奖机会</div>
+    </div>
+
+    <div class="footer">
+        <img src="../images/wangling/wlfoot.jpg" />
+    </div>
+
+
+    <!------弹层------>
+    <div class="dialog_center" id="dialog_center1" name="dialog">
+        <h3>领取失败</h3>
+        <p>请稍后再试！</p>
+        <div class="dialog_footer">
+            <a href="javascript:void(0)" class="button button-big">朕知道了</a>
+        </div>
+        <i class="close_btn"></i>
+    </div>
+    <div class="dialog_center" id="dialog_center2" name="dialog">
+        <h3>兑换成功</h3>
+        <p>2000M流量兑换成功，具体受理结果以短信为准。 </p>
+        <div class="dialog_footer">
+            <a href="javascript:void(0)" class="button button-big">朕知道了</a>
+        </div>
+        <i class="close_btn"></i>
+    </div>
+    <div class="dialog_bg" name="dialog"></div>
+
+    <!------弹层------>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".gztiter").click(function() {
+            $(".gz-text").toggleClass("show")
+            var h = $(document).height() - $(window).height();
+            $(document).scrollTop(h);
+        });
+        $(".jbb-button a").click(function() {
+            $("#dialog_center1").addClass("show");
+            $(".dialog_bg").addClass("show");
+
+        });
+        $(".close_btn").click(function() {
+            $("[name=dialog]").removeClass("show");
+
+
+        });
+        $(".dialog_bg").click(function() {
+            $("[name=dialog]").removeClass("show");
+
+        })
+    </script>
+</body>
+
+</html>

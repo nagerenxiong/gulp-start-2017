@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>亲密充</title>
+    <link rel="stylesheet" type="text/css" href="../css/qmchongzhi20170313zx.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+      @@include('../component/top/index.html',{"title":"操作成功"})
+      
+   <div class="jg-man">
+   	<div class="jg-top">
+	   <p>充值时间：2017-02-03</p>
+	   	<h2>充值成功！</h2>
+	   	<em>预计10分钟内到账，具体以10086短信为准</em>
+   	</div>
+   	<div class="jgmanlist">
+   		<p>手机号码：<span class="orange">15180198655</span></p>
+   		<p>充值金额：<span class="orange">100元</span></p>
+   		<p>充值流水：CCCCCCCCCC</p>
+   	</div>
+   	<div class="img">
+   		<img src="../images/chongzhi/ewm.jpg" name="二维码"/>
+   		<em>来自HUI买</em>
+   	</div>
+   	
+   	 
+   	
+   </div>
+   
+    <div class="footerbtn2">
+  	 	<a href="##" class="button button-big wxshare">充值结果微信分享给好友</a>
+   		<a href="##" class="button button-big button-gray">返回首页</a>
+   </div>
+   
+  
+   
+   <!------弹层------>
+ <div class="wxshareimg" id="" name="dialog">
+    <img class="shareimg" src="../images/tyshare.png" />
+</div>
+ 
+<div class="dialog_bg" name="dialog"></div>
+
+  <!------弹层------>  
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+  <script>
+  	
+  		$(".wxshare").click(function(){
+  		  $(".wxshareimg").addClass("show") ;
+  		  $(".dialog_bg").addClass("show") ;
+  		
+  	});
+  		
+  	$(".dialog_bg").click(function(){
+  		 $("[name=dialog]").removeClass("show"); 
+  		
+  	})
+  		
+  </script>
+</body>
+
+</html>

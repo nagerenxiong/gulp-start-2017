@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../css/more20170406hq.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+   
+</head>
+<body>
+	<!-- top start -->
+    @@include('../component/top/nav.html',{"title":"更多"})
+  <!-- top end -->
+   <div class="more-items">
+     <h4>业务查询</h4>
+     <div class="more-items-con">
+      <a href="#" class="more-item more-item1"><b></b><span>话费余额</span></a>
+   	  <a href="#" class="more-item more-item2"><b></b><span>剩余流量</span></a>
+   	  <a href="#" class="more-item more-item3"><b></b><span>账单查询</span></a>
+   	  <a href="#" class="more-item more-item4"><b></b><span>通话详单</span></a>
+   	  <a href="#" class="more-item more-item5"><b></b><span>积分查询</span></a>
+   	  <a href="#" class="more-item more-item6"><b></b><span>已办业务</span></a>
+   	  <a href="#" class="more-item more-item7"><b></b><span>套餐余量</span></a>
+   	  <a href="#" class="more-item more-item8"><b></b><span>星级权益</span></a>
+     </div>
+   	  
+   </div>
+
+    <div class="more-items">
+     <h4>业务推荐</h4>
+     <div class="more-items-con">
+      <a href="#" class="more-item more-item9"><b></b><span>无敌流量</span></a>
+   	  <a href="#" class="more-item more-item10"><b></b><span>4G套餐</span></a>
+   	  <a href="#" class="more-item more-item11"><b></b><span>包月流量</span></a>
+   	  <a href="#" class="more-item more-item12"><b></b><span>夜间流量</span></a>
+   	  <a href="#" class="more-item more-item13"><b></b><span>快修</span></a>
+   	  <a href="#" class="more-item more-item14"><b></b><span>号卡</span></a>
+   	  <a href="#" class="more-item more-item15"><b></b><span>宽带预约</span></a>
+   	  <a href="#" class="more-item more-item16"><b></b><span>最爱</span></a>
+     </div>
+   	  
+   </div>
+    <div class="more-items">
+     <h4>其他推荐</h4>
+     <div class="more-items-con">
+      <a href="#" class="more-item more-item17"><b></b><span>地铁流量</span></a>
+   	  <a href="#" class="more-item more-item18"><b></b><span>我i我家</span></a>
+   	  <a href="#" class="more-item more-item19"><b></b><span>流量共享</span></a>
+   	  <a href="#" class="more-item more-item20"><b></b><span>亲情号码</span></a>
+   	  <a href="#" class="more-item more-item21"><b></b><span>漫游优惠</span></a>
+   	  <a href="#" class="more-item more-item22"><b></b><span>彩铃</span></a>
+   	  <a href="#" class="more-item more-item23"><b></b><span>139邮箱</span></a>
+   	  <a href="#" class="more-item more-item24"><b></b><span>功能设置</span></a>
+     </div>
+   	  
+   </div>
+
+</body>
+ <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+ 	         $(function(){
+
+             //top 下拉js
+             $(".top-icon-right").click(function() {
+  $(".top .top-nav-slide").slideToggle(20);
+  $(".center-top .top-nav-slidee").slideToggle(20);
+  $(".tip-search .top-nav-slide").hide();
+  $(".modal-bg").toggle();
+});
+
+$(".modal-bg").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+$(".top-nav-arrow").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+
+
+
+         })
+ </script>
+</html>

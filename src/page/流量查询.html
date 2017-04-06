@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>流量查询</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/flowdetail20170309xyy.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+    <style>
+    .highcharts-root {
+        position: relative;
+    }
+    </style>
+</head>
+
+<body>
+    @@include('../component/top/nav.html',{"title":"流量详情"})
+    <div class="content1">
+        <div class="title">
+            剩余流量
+        </div>
+        <div class="num-wrap">
+            <span class="num">3698</span><span class="font">MB</span><a href="#"><img class="icon" src="../images/icon-jia.png" /></a>
+        </div>
+        <div class="info">
+            <span>已用：1302MB</span>
+            <span>总量：5000MB</span>
+        </div>
+    </div>
+    <div class="swiper-container content2">
+        <div class="swiper-wrapper ">
+              <div class="swiper-slide">
+                <div class="title">
+                    <span><img src="../images/icon-xiangqing.png" class="icon-info">详情</span>
+                    <!-- <i class="shang"></i> -->
+                </div>
+                <ul class="flowdetail-list">
+                    <li>
+                        <div class="flow-title">
+                            飞享套餐88-700MB
+                        </div>
+                        <div class="detail">
+                            <span>已用：500MB</span><span class="surplus">剩余：200MB</span>
+                        </div>
+                        <div>
+                            <div class="progress-wrap">
+                                <div class="progress" style="width:20%">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flow-title">
+                            飞享套餐88-700MB
+                        </div>
+                        <div class="detail">
+                            <span>已用：500MB</span><span class="surplus">剩余：200MB</span>
+                        </div>
+                        <div>
+                            <div class="progress-wrap">
+                                <div class="progress1" style="width:30%">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flow-title">
+                            飞享套餐88-700MB
+                        </div>
+                        <div class="detail">
+                            <span>已用：500MB</span><span class="surplus">剩余：200MB</span>
+                        </div>
+                        <div>
+                            <div class="progress-wrap">
+                                <div class="progress" style="width:30%">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <div class="title1">
+                    <a href="javascript:void(0)" class="show-detail">查看详情</a>
+                    <a href="javascript:void(0)"class="active">按日查看</a>
+                    <a href="javascript:void(0)" >按月查看</a>
+                </div>
+                <div id="chart-date"  class="show-chart"></div>
+                <div id="chart-month"></div>
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+    @@include('../component/shop-layout-1and3/index.html') @@include('../component/shop-layout-2and2/index.html') @@include('../component/shop-layout-1and1/index.html')
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript">
+    var mySwiper = new Swiper('.content2', {
+        pagination: ".content2 .pagination",
+        grabCursor: true,
+        autoHeight: true, //高度随内容变化
+        observer: true,
+        observeParents: true,
+        prevButton:'.show-detail',
+        autoplayDisableOnInteraction: false
+    })
+    var chartHeight=$(".swiper-wrapper").height();
+    var chart1 = Highcharts.chart('chart-date', {
+        legend: {
+            width:"100%",
+        },
+        chart: {
+            animation:false,
+            type: 'line',
+            height:chartHeight
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: '单位：MB',
+            align: 'right',
+            floating: true,
+            verticalAlign: "middle",
+            x: 0
+        },
+        xAxis: {
+            categories: ['19', '20', '21', '22', '23', '24', '25']
+        },
+        yAxis: {
+            title: {
+                text: null
+            },
+            visible: false
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true // 开启数据标签
+                },
+                enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+            },
+            series: {
+                events: {
+                    legendItemClick: function(mmm) {
+                        for (var i = 0; i < chart1.series.length; i++) {
+                            chart1.series[i].hide();
+                        }
+                        var visibility = this.visible ? 'visible' : 'hidden';
+                    }
+                }
+            }
+        },
+        exporting: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '近七日',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2],
+            color: '#3185ff'
+        }, {
+            name: '2月13日-2月19日',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 6.2, 3.0],
+            visible: false,
+            color: '#3185ff'
+
+        }, {
+            name: '2月6日-2月12日',
+            data: [6, 4.2, 5.7, 8.5, 11.9, 5.2, 3.0],
+            visible: false,
+            color: '#3185ff'
+        }]
+    });
+
+    var chart2 = Highcharts.chart('chart-month', {
+          tooltip: {
+            borderColor: '#000000'
+        },
+        chart: {
+            type: 'column',
+            animation:false,
+            height:chartHeight
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: '单位：MB',
+            align: 'right',
+            floating: true,
+            verticalAlign: "top",
+            x: 0
+        },
+        xAxis: {
+            categories: ['7月', '8月', '9月', '10月', '11月', '12月']
+        },
+        yAxis: {
+            title: {
+                text: null
+            },
+            visible: false
+        },
+        plotOptions: {
+            column: {
+                dataLabels: {
+                    enabled: true, // 开启数据标签
+                    color:"333333",
+                    crop:false
+                },
+                pointWidth: 20,
+                enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+            },
+            series: {
+                events: {
+                    legendItemClick: function(mmm) {
+                        for (var i = 0; i < chart2.series.length; i++) {
+                            chart2.series[i].hide();
+                        }
+                        var visibility = this.visible ? 'visible' : 'hidden';
+                    }
+                }
+            }
+        },
+        exporting: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: '近半年',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5],
+            color: '#3185ff',
+        }, {
+            name: '1-6月',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 6.2],
+            color: '#3185ff',
+            visible: false,
+
+        }]
+    });
+    $(".content2 .title1 a").click(function(){
+        var index=$(".content2 .title1 a").index(this);
+        if(index==0)
+        {
+
+        }
+        else if(index==1)
+        {
+            $(".content2 .title1 a").removeClass("active");
+            $(this).addClass("active");
+            $("#chart-date").addClass('show-chart');
+            $("#chart-month").removeClass('show-chart');
+        }
+        else if(index==2)
+        {
+            $(".content2 .title1 a").removeClass("active");
+            $(this).addClass("active");
+            $("#chart-date").removeClass('show-chart');
+            $("#chart-month").addClass('show-chart');
+        }
+    })
+    $(window).resize(function() {
+        chart1.reflow();
+        chart2.reflow();
+    })
+     $(".top-icon-right").click(function () {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+    </script>
+</body>
+
+</html>

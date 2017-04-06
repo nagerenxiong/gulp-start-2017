@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安装进度查询</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/kuandai20170329xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top-wrap">
+                <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+                <a class="top-icon-right"></a>
+                <h1>安装进度查询</h1>
+                <ul class="top-nav-slide">
+                    <li class="top-nav-arrow"></li>
+                    <li><a href="/hui/release/home/index.html"><i class="top-nav-home"></i>首页</a></li>
+                    <li><a href="/hui/shopFinds/init"><i class="top-nav-zd"></i>找店</a></li>
+                    <li><a href="/hui/shua/index"><i class="top-nav-sys"></i>转转贝</a></li>
+                    <li><a href="/hui/flow/queryGprs"><i class="top-nav-llian"></i>流量</a></li>
+                    <li><a href="/hui/user/usercenter/showUserCenter"><i class="top-nav-wo"></i>我</a></li>
+                </ul>
+                <div class="modal-bg" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div class="content-kuandai">
+            <img src="../../images/kuandai/icon-bzjdcx.png" class="img" />
+            <p class="p1">当前进度</p>
+            <p class="p3">营销员确认订单</p>
+            <p class="p2">预约时间：2017年8月29日</p>
+        </div>
+        <div class="content1-kuandai">
+            <div class="green">
+                <i class="font-gou"></i><i class="font-1" style="display: none"></i><span class="title">预约信息提交</span>
+                <span class="time">2016-09-10 10:32:11</span>
+                <div class="line"></div>
+            </div>
+            <div class="green">
+                <i class="font-gou "></i><i class="font-2" style="display: none"></i><span class="title">营销员确认订单</span>
+                <span class="time">2016-09-10 10:32:11</span>
+                <p class="detail">营销员： 罗老板 15180198551</p>
+                <div class="line"></div>
+            </div>
+            <div class="org">
+                <i class="font-naozhongtixing "></i><i class="font-3" style="display: none"></i><span class="title">上门安装</span>
+                <i class="huiicon font-shang1"></i>
+                <ul class="list-smaz">
+                    <li><i class="font-yuandian1"></i><span>【预约上门】</span>
+                        <p>预约人员：刘师傅 13879111187</p>
+                    </li>
+                    <li><i class="font-yuandian1"></i><span>【上门安装】</span>
+                        <p>安装人员：刘师傅 13879111187</p>
+                    </li>
+                    <li class="gray"><i class="font-yuandian1"></i><span>【安装完成】</span></li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <div class="gray">
+                <i class="font-4 "></i><span class="title">完成订单<a href="#" class="link">去评价</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".top-icon-right").click(function() {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.scrolltop {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #dedede;
+    position: fixed;
+    bottom: 55px;
+    right: 10px;
+    display: block;
+    background: url(../images/top.png) center no-repeat #fff;
+    border-radius: 100%;
+    z-index: 10000;
+}

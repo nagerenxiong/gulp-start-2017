@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../../css/cx20170328hq.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+   
+</head>
+<body>
+<!-- top start -->
+    @@include('../../component/top/nav.html',{"title":"收益说明"})
+<!-- top end -->
+<!-- main start -->
+
+<div class="bg-f8"></div>
+<div class="sysm-title">【广告收益】</div>
+<div class="sysm-con">
+   <p>你可以通过微信或短信方式进行广告分发：</p>
+   <p>1、微信：通过微信好友、微信群、朋友圈转发广告页面，被好友成功点击即算成功分发1次</p>
+   <p>2、短信：输入目标用户号码后，用户将收到1065XXXX号码发送的模板短信，点击短信连接即算成功分发1次。</p>
+</div>
+<div class="sysm-title">【成交收益】</div>
+<div class="sysm-con">
+   <p>点击广告的用户通过任意方式办理制定业务，你还可以获得额外的成交收益哦！</p>
+</div>
+
+
+
+
+
+
+<!-- main end-->
+</body>
+ <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+         $(function(){
+
+             //top 下拉js
+             $(".top-icon-right").click(function() {
+  $(".top .top-nav-slide").slideToggle(20);
+  $(".center-top .top-nav-slidee").slideToggle(20);
+  $(".tip-search .top-nav-slide").hide();
+  $(".modal-bg").toggle();
+});
+
+$(".modal-bg").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+$(".top-nav-arrow").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+
+         })
+
+      </script>
+</html>

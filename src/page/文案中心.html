@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>文案中心</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/copywriter20170308xyy.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+    @@include('../component/top/nav.html',{"title":"文案标题"})
+    <div class="mt20">
+        <img src="../images/temp/copywiter-banner.jpg" />
+    </div>
+    <ul class="px-list mt20">
+        <li id="defaultSort" class=""><a href="javascript:void(0)">默认排序</a></li>
+        <li id="priceSort" class="active"><a href="javascript:void(0)">价格排序<i class="sort-btn-up"></i></a></li>
+    </ul>
+    <div class="shop-layout-2and2">
+        <div class="shop-layout-2and2-t">
+            <a href="#">
+                <div><img src="../images/temp/pro11.jpg"></div>
+                <p class="shopname">IPhoen 7plus</p>
+                <p class="shopinfo">办理和多号，预存30送2000积分</p>
+                <p class="shopprice"><span>¥：6288</span>
+                    <del>¥：6988</del>
+                </p>
+            </a>
+            <a href="#">
+                <div><img src="../images/temp/pro11.jpg"></div>
+                <p class="shopname">IPhoen 7plus</p>
+                <p class="shopinfo">办理和多号，预存30送2000积分</p>
+                <p class="shopprice"><span>¥：6288</span>
+                    <del>¥：6988</del>
+                </p>
+            </a>
+        </div>
+        <div class="shop-layout-2and2-b">
+            <a href="#">
+                <div><img src="../images/temp/pro11.jpg"></div>
+                <p class="shopname">IPhoen 7plus</p>
+                <p class="shopinfo">办理和多号，预存30送2000积分</p>
+                <p class="shopprice"><span>¥：6288</span>
+                    <del>¥：6988</del>
+                </p>
+            </a>
+            <a href="#">
+                <div><img src="../images/temp/pro11.jpg"></div>
+                <p class="shopname">IPhoen 7plus</p>
+                <p class="shopinfo">办理和多号，预存30送2000积分</p>
+                <p class="shopprice"><span>¥：6288</span>
+                    <del>¥：6988</del>
+                </p>
+            </a>
+        </div>
+    </div>
+    <p class="font">小编说：智能无线，享受系于手腕间的智能科技.....</p>
+    <div class="read">
+        <span class="num-read">阅读：375</span>
+        <span class="num-good"><img src="../images/zan.png"><em>点赞：375</em></span>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(".px-list li").click(function () {
+            $(".px-list li").removeClass("active ");
+            $(this).addClass("active");
+        });
+        $(".top-icon-right").click(function () {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+    </script>
+</body>
+
+</html>

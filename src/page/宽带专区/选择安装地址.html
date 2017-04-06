@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选择安装地址</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/kuandai20170329xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        @@include('../../component/top/nav.html',{"title":"选择安装地址"})
+       <div class="search-result-wrap">
+           <input type="text" name="" value="" class="search-input" placeholder="请输入小区/自然村/道路/学校/商场/公司名称">
+           <div class="search-result-list">
+               <a href="../流量套餐办理-选择预约店铺.html">
+                   <p>南昌市红谷滩新区学府大道666号江西移动南昌市红谷滩新区学府号江西移动</p>
+               </a>
+               <a href="#">
+                   <p>南昌市红谷滩新区学府大道666号</p>
+               </a>
+           </div>
+            <!--<div class="null">
+                <img src="../../images/kuandai/kuandai-null.png" />
+                <p>该区域没有宽带覆盖</p>
+            </div>-->
+       </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(".top-icon-right").click(function() {
+        $(".top .top-nav-slide").slideToggle(20);
+        $(".modal-bg").toggle();
+    });
+    $(".modal-bg").click(function() {
+        $(".top .top-nav-slide").slideUp(20);
+        $(".modal-bg").hide();
+    });
+    $(".top-nav-arrow").click(function() {
+        $(".top .top-nav-slide").slideUp(20);
+        $(".modal-bg").hide();
+    });
+    </script>
+</body>
+
+</html>

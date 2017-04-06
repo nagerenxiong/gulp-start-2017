@@ -1,0 +1,245 @@
+ @import "common";
+@import "../component/model/model"; 
+ @import "../component/top/index";
+ body {
+    background-color: #fff;
+} 
+.mantop{
+    text-align: center;
+    border-top:.375rem solid #eee;
+    padding: 1rem 1rem;
+    background: #fff;
+    img{height:px2rem(369) ;width: px2rem(444);}
+    h3{font-size: .7rem; font-weight: 400; line-height: 1.4rem;}
+    p{font-size: .6rem ; color: #666;}
+} 
+.number-list{
+    border-top:.375rem solid #eee;
+    background: #fff;
+    padding: .5rem 0;
+    ul{
+        li{
+            padding:0 .25rem 0 .7rem;
+            margin: .5rem 0;
+            overflow: hidden;
+            position: relative;
+              .delet{ 
+                     position: absolute;
+                     right: 14%;
+                     top:-.2rem;
+                     height: 2.2rem;
+                     width:2.2rem;
+                    z-index: 5;
+                     display: block;
+                     background: url(../images/chongzhi/delet.jpg) no-repeat center;
+                     background-size: .8rem .8rem;
+                     }
+            .card{
+                border: 1px solid #cdcdcd;
+                border-radius: 5px;
+                padding: .4rem .4rem;
+                width: 86%;
+                float: left;
+                position: relative;
+                 img{ height: 2.15rem;width: 2.15rem; float: left; margin-right: .5rem;}
+                 h4{ font-size: .7rem; font-weight: 400;}
+                 em{ font-size: .5rem; color: #999;line-height: 1.2rem;}
+                 .yue{ float: right; font-size: .5rem;}
+                 .fs14{font-size: .7rem;}
+               
+                 
+                }
+                .red{color: #dc4747; }
+                .btn{ width: 12%; float: right; padding:.3rem 2%; 
+                border: 1px solid #eca847;
+                text-align:center;
+                line-height: .8rem;
+                color: #eca847;
+                 border-radius: 5px;
+                 margin-left:2%;
+                }
+            .card:before{
+                content: "";
+                position: absolute;
+                height: 1.9rem;
+                width: .2rem;
+                background: #eca847;
+                left: -.2rem;
+                top: .5rem;
+                border-radius: 3px 0 0 3px;
+                
+            }
+            
+        }
+    }
+}
+.footerbtn{
+    padding-top: 1rem;
+    background: #fff;
+    text-align: center;
+    a{border-top: 1px solid #cdcdcd; color: #eca847; width: 100%; display: block;height: 2.2rem;line-height: 2.2rem;}
+    .button{margin:1rem .5rem 0rem .5rem; width: auto;border: 1px solid #eca847;}
+}
+.btn2x{ overflow: hidden;
+    .button{ width: 46%; float: left; margin: .5rem 2%;}
+}
+.formes{
+    padding: .5rem;
+    border-top:.375rem solid #eee;
+    background: #fff;
+    .inputer{ border-bottom: 1px solid #cdcdcd; width: 100%; height: 2.2rem;}
+}
+.jg-man{
+    background: #fff;
+    border-top:.375rem solid #eee;
+    padding: .5rem;
+   
+    .jg-top{
+        border-bottom: 1px solid #eee;
+        padding: .3rem 0 .3rem;
+    }
+    h2{font-size: 1rem; font-weight: 400;}
+    em{ color: #999; line-height: 1.3rem;}
+    .jgmanlist{
+        padding: .5rem 0;
+       border-bottom: 1px solid #eee;
+    p{ line-height: 1.2rem;}
+    
+    }
+    .img{text-align: right;
+		height: 7.5rem;
+		display: block;
+        img{ width: 7rem; display: block; margin: .5rem auto;}
+    }
+}
+.orange{color: #eca847;}
+.footerbtn2{
+        clear: both;
+    background: #fff;
+    padding: .5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .button{}
+    .button-gray{ border-color: #cdcdcd; color: #333;}
+}
+.wxshareimg{
+    position:fixed;
+    top:0;
+    right: 0;
+    display: none;
+    z-index: 99999;
+    text-align: right;
+    img{ width: 70%;}
+}
+.navertj{
+    background: #fff;
+    border-top:.375rem solid #eee;
+    padding: 1rem .5rem 2rem .5rem;
+    overflow: hidden;
+    .myinfor{
+        text-align: center;
+        font-size: .7rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1rem;
+        img{width: 2.15rem; margin-right: .5rem;}
+    }
+    .forms{
+        padding: 1rem 0;
+        select{background: #fff;}
+        .topselect{
+              width: 70%; 
+             margin: 0 auto;
+             display: block;
+             text-align: center;
+             border-bottom: 1px solid #eee;
+             select{ 
+                 color: #eca847;
+                 font-size: .9rem;
+                 text-align: center;
+                 height: 2rem;
+                 width:auto;
+                padding: 0 20%;
+                 option{color: #eca847;text-align: center; padding: 0 20%;}
+                 }
+       
+        }
+         .nextselect{
+              width: 44%; 
+             display: block;
+             float: left;
+             margin: 1rem 0 0 3%;
+             text-align: center;
+             border-bottom: 1px solid #eee;
+             select{ 
+                 color: #eca847;
+                 font-size: .9rem;
+                 text-align: center;
+                 height: 2rem;
+                 width:auto;
+                padding: 0 10%; 
+                 option{color: #eca847;text-align: center; padding: 0 20%;}
+                 }
+             }
+           
+}
+} 
+            .select-icon{ position: relative;}
+            .select-icon:before{
+                 content: "";
+                 height: .5rem;
+                 width: 1rem;
+                 position: absolute;
+                 display: block;
+                 background: url(../images/chongzhi/qmup.jpg) no-repeat;
+                 background-size: 100%;
+                 right: 5%;
+                 bottom: .6rem;
+             }
+             .xiey{
+                 font-size: .6rem;
+                 margin-bottom: .5rem;
+                 .blue{ color: #0399df;}
+                 i{ 
+                     height: .6rem;
+                     width: .58rem;
+                     display: block;
+                     float: left;
+                     margin: .2rem .3rem 0 0;
+                     background: url(../images/chongzhi/qchoces.jpg) no-repeat;
+                     background-size: 100%;
+                     }
+             }
+.sharejg{
+	background: url(../images/chongzhi/czsharebg.jpg) no-repeat;
+	background-size: 100% 100%;
+	height: px2rem(1037);
+	width: 16rem;
+	display: block;
+	.mantext{
+		padding:  px2rem(325) 2rem 0 2rem;
+	}
+	h2{
+		font-weight: 400;
+		 white-space:nowrap;
+	}
+		em{ color: #eca847}
+	p{
+		margin-top: .5rem;
+		line-height: 1.5rem;
+		text-indent:2em;
+		height:6.3rem;
+		overflow:hidden;
+			em{font-size: .8rem}
+	}
+	a{
+		color: #4d95d9;
+	}
+	span{
+		line-height: 1.5rem;
+		
+		display: block;
+		width: 100%;
+		text-align:right;
+	}
+}

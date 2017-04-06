@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>无敌爽翻 最高送20G</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <link rel="stylesheet" type="text/css" href="../../css/wuxia20170327xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../images/wuxia/wuxia-font1.png" class="title">
+        <img src="../../images/wuxia/wuxia-font.png" class="font">
+        <img src="../../images/wuxia/wuxia-hua.png" class="hua1 hua1-anime" />
+        <img src="../../images/wuxia/wuxia-hua1.png" class="hua2 hua2-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua3 hua3-anime" />
+        <img src="../../images/wuxia/wuxia-hua1.png" class="hua4 hua4-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua5 hua5-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua6 hua6-anime" />
+    </div>
+    <div class="modal" style="display: block">
+        <img src="../../images/wuxia/wuxia-gz.png" class="tip" />
+        <div class="modal-wrap">
+            <img src="../../images/wuxia/wuxia-font2.png" class="modal-title">
+            <p class="modal-sub">完成任务送2G省内流量</p>
+            <div class="modal-progress">
+                <div class="progress-status">
+                    <!-- <img src="../../images/wuxia/wuxia-rw1.png" class="progress-status-logo"> -->
+                    <img src="../../images/wuxia/wuxia-rw2.png" class="progress-status-logo">
+                </div>
+                <div class="progress-wrap">
+                    <div class="progress-num">
+                        <em id="num">0</em>/100
+                    </div>
+                    <div class="progress-bar-warap">
+                        <div class="bg-bar">
+                        </div>
+                        <div class="progress-bar" style="width: 0%">
+                        </div>
+                    </div>
+                    <div class="progress-info">
+                        本月还差0.47G达成任务
+                    </div>
+                </div>
+            </div>
+            <div class="modal-btn-wrap">
+                <a href="武侠流量 - 分享.html" class="btn-flow active">立即领取2G流量</a>
+            </div>
+            <dl class="list">
+                <dt class="list-title"><img src="../../images/wuxia/wuxia-title.png"></dt>
+                <dd>
+                    <a href="#">
+                        <img src="../../images/wuxia/wuxia-pro.png" class="boxshadow">
+                        <p>9.9元</p>
+                        <p>2G日包</p>
+                    </a>
+                </dd>
+                <dd>
+                    <a href="#">
+                        <img src="../../images/wuxia/wuxia-pro1.png" class="boxshadow">
+                        <p>19.9元</p>
+                        <p>10G七日包</p>
+                    </a>
+                </dd>
+                <dd>
+                    <a href="#">
+                        <img src="../../images/wuxia/wuxia-pro2.png" class="boxshadow">
+                        <p>59.9元</p>
+                        <p>20G月包</p>
+                    </a>
+                </dd>
+            </dl>
+            <div class="list1">
+                <a href="#"><img src="../../images/wuxia/wuxia-pro1.jpg"></a>
+                <a href="#"><img src="../../images/wuxia/wuxia-pro1.jpg"></a>
+            </div>
+            <div class="pro">
+                <img src="../../images/wuxia/wuxia-pro2.jpg">
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <script>
+        var countDelta = 0;
+        var runNum = 0;
+        var progressNum = 80;
+
+        function moveToNext() {
+            var start = null;
+            var lastTimestamp = null;
+            var delta = 0;
+            return function req(timestamp) {
+                if (start === null) {
+                    start = timestamp;
+                    lastTimestamp = timestamp;
+                }
+                delta = timestamp - lastTimestamp;
+                countDelta += delta;
+                lastTimestamp = timestamp;
+                var stop = requestAnimationFrame(req);
+                var timesNum = 10;
+                if (countDelta >= timesNum) {
+                    runNum = runNum + 1;
+                    if (runNum > progressNum) {
+                        window.cancelAnimationFrame(stop);
+                        runNum = progressNum;
+                    }
+                    $(".progress-bar").width(runNum + "%");
+                    $("#num").text(runNum);
+
+                    countDelta = 0;
+                }
+            }
+        }
+        $(".modal1").css("height", 0).addClass("show");
+        requestAnimationFrame(moveToNext())
+    </script>
+</body>
+
+</html>

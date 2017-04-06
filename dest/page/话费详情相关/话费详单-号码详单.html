@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../../css/costcalls20170321hq.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+
+</head>
+
+<body class="bg-white">
+    <!-- top start -->
+    <div class="top">
+        <div class="top-wrap">
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <a class="top-icon-right"></a>
+            <h1>通话详情</h1>
+            <ul class="top-nav-slide">
+                <li class="top-nav-arrow"></li>
+                <li><a href="/hui/release/home/index.html"><i class="top-nav-home"></i>首页</a></li>
+                <li><a href="/hui/shopFinds/init"><i class="top-nav-zd"></i>找店</a></li>
+                <li><a href="/hui/shua/index"><i class="top-nav-sys"></i>转转贝</a></li>
+                <li><a href="/hui/flow/queryGprs"><i class="top-nav-llian"></i>流量</a></li>
+                <li><a href="/hui/user/usercenter/showUserCenter"><i class="top-nav-wo"></i>我</a></li>
+            </ul>
+            <div class="modal-bg" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- top end -->
+    <!-- main start -->
+
+    <div class="bg-f8"></div>
+    <div class="search-tel"><label>查询号码：</label>
+        <div class="search-tel-div"><input type="text" value="12345678888" class="search-tel-input"></div><input type="button" value="重置"></div>
+    <div class="search-tel"><label>查询号码：</label>
+        <div class="search-tel-date"><input type="text" value="2016.12.10" disabled><span>至</span> <input type="text" value="2016.12.11" disabled> </div>
+    </div>
+
+    <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- main end-->
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../js/dateRange.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+
+        //top 下拉js
+        $(".top-icon-right").click(function() {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+
+        //置空
+        $(".search-tel input[type='button']").click(function() {
+            $(".search-tel-div input").val("");
+
+        });
+
+
+    })
+</script>
+
+</html>

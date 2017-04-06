@@ -1,0 +1,213 @@
+ @import "common";
+@import "../component/model/model"; 
+ @import "../component/top/index";
+ body {
+    background-color: #eee;
+} 
+ .jbb-top{ margin-top: .5rem;}
+ .jbb-bg{
+     display: block;
+     height: px2rem(463);
+     width: 16rem;
+     background: url(../images/addbeibei/jbbbg.jpg) no-repeat ;
+     background-size:100% ;
+     position: relative;
+ }
+.beibei0{position: absolute; width:px2rem(150);height:px2rem(170); text-align: center;}
+
+.beibei1{
+     @extend .beibei0;
+     left:px2rem(55);
+     top:px2rem(44);
+     .bei1{
+         background: url(../images/addbeibei/beibei_03.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin: 0 auto;
+         position: relative;
+         z-index: 2;
+     }
+     .addbei{ 
+         background: url(../images/addbeibei/add_15.png) no-repeat;
+          background-size:100% ;
+         width:px2rem(74);
+         height:px2rem(40);
+         position: absolute;
+         top: px2rem(110);
+         left: px2rem(45);
+         z-index: 1;
+     }
+}
+.beibei2{
+     @extend .beibei0;
+     left:px2rem(55);
+     top:px2rem(197);
+     .bei1{
+         background: url(../images/addbeibei/beibei_05.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin: 0 auto;
+         position: relative;
+          z-index: 2;
+     }
+     .addbei{
+         background: url(../images/addbeibei/add_15.png) no-repeat;
+          background-size:100% ;
+         width:px2rem(74);
+         height:px2rem(40);
+         position: absolute;
+         top: px2rem(110);
+         left: px2rem(45);
+         z-index: 1;
+     }
+}
+.beibei3{
+     @extend .beibei0;
+     left:px2rem(236);
+     top:px2rem(190);
+     .bei1{
+         background: url(../images/addbeibei/beibei_07.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin: 0 auto;
+         position: relative;
+          z-index: 2;
+     }
+     .addbei{
+         background: url(../images/addbeibei/add_15.png) no-repeat;
+          background-size:100% ;
+         width:px2rem(74);
+         height:px2rem(40);
+         position: absolute;
+         top: px2rem(110);
+         left: px2rem(45);
+         z-index: 1;
+     }
+}
+.beibei4{
+     @extend .beibei0;
+     left:px2rem(420);
+     top:px2rem(197);
+     .bei1{
+         background: url(../images/addbeibei/beibei_13.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin: 0 auto;
+         position: relative;
+          z-index: 2;
+     }
+     .addbei{
+         background: url(../images/addbeibei/add_15.png) no-repeat;
+          background-size:100% ;
+         width:px2rem(74);
+         height:px2rem(40);
+         position: absolute;
+         top: px2rem(110);
+         left: px2rem(45);
+         z-index: 1;
+     }
+}
+.beibei5{
+     @extend .beibei0;
+     left:px2rem(416);
+     top:px2rem(44);
+     .bei1{
+         background: url(../images/addbeibei/beibei_12.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin: 0 auto;
+         position: relative;
+          z-index: 2;
+     }
+     .addbei{
+         background: url(../images/addbeibei/add_15.png) no-repeat;
+          background-size:100% ;
+         width:px2rem(74);
+         height:px2rem(40);
+         position: absolute;
+         top: px2rem(110);
+         left: px2rem(45);
+         z-index: 1;
+     }
+}
+.beibei6{
+     @extend .beibei0;
+     left:px2rem(220);
+     top:px2rem(0);
+     width:px2rem(220);
+     height:px2rem(220);
+     .bei1{
+         background: url(../images/addbeibei/door.png) no-repeat ;
+         background-size:100% ;width:px2rem(120);height:px2rem(140);margin:.8rem auto;
+         position: relative;
+         z-index: 2;
+     }
+     .addbei{
+         animation: light .5s linear .2s infinite alternate;
+          background-size:100% ;
+          background-repeat: no-repeat; 
+         width:px2rem(220);
+         height:px2rem(140);
+         position: absolute;
+         top: px2rem(0);
+         left: px2rem(0);
+         z-index: 1;
+     }
+}
+.win .addbei{ display: none;}
+.none .bei1{opacity:0 ; animation: beinone 1s linear 0s 5 }
+.jbb-button{ background: #fff;padding: .7rem;}
+.jbb-box{
+    background: #fff;
+    padding: .5rem;
+    margin-top: .5rem;
+    h3{
+        height:px2rem(32);
+        width: px2rem(164);
+        display: block;
+        margin:px2rem(10);
+        background: url(../images/addbeibei/lqlog.jpg) no-repeat;
+        background-size: 100%;
+    }
+    ul{
+        border-top: 1px solid #eee;
+        width: 100%;
+        li{
+           
+             border-bottom: 1px solid #eee;
+             overflow: hidden;
+             clear: both;
+            span{
+                float: left;
+                display: block;
+                 font-size: 0.6rem;
+                 line-height:px2rem(68) ;
+            }
+            em{
+                float: right;
+                 display: block;
+                 color: #999;
+                 font-size: 0.5rem;
+                  line-height:px2rem(68) ;
+                
+            }
+        }
+    }
+}
+
+.hdgz{
+    margin-top: 1.5rem;
+    a{
+        color: #24b7eb;
+        text-decoration:underline;
+        line-height: 2.2rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .gz-text{
+        p{ color: #777;}
+    }
+}
+
+
+@keyframes light
+{
+from {background: url(../images/addbeibei/light1.png) no-repeat; background-size:100% ;}
+to {background: url(../images/addbeibei/light2.png) no-repeat; background-size:100% ;}
+}
+@keyframes beinone
+{
+from {opacity:.2 ;}
+to {opacity:0;}
+}

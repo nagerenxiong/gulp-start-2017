@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import "common";
+@mixin mt20{margin-top:px2rem(20)}
+@import "../component/top/index";
+body{background-color:#fff; font-size: px2rem(24); color: #333;  font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif;}
+img{width:100%;}
+textarea,input{ outline: none;}
+
+.bg-f8{ background: #f8f8f8; height: px2rem(20);}
+.fl{float: left;}
+.fr{float: right}
+.font-gray{ color:#999;}
+.font-org{color: #eca847;}
+.font-red{ color:#dc4747;}
+.pos-rel{position: relative;}
+.fs-10{font-size: px2rem(20);}
+
+// 成交明细
+.cjmx-title{height: px2rem(80); line-height:px2rem(80); color: #999; font-size: px2rem(28); padding:0 px2rem(20); border-bottom: 1px solid #cdcdcd;}
+.cjmx-title span{color:#333;font-size: px2rem(28);}
+.cjmx-con li{ padding-left: px2rem(20);}
+.cjmx-con-li{ border-bottom: 1px solid #eee; padding:px2rem(15) px2rem(20) px2rem(15) 0;}
+.cjmx-con-li-p1{font-size: px2rem(28); }
+.cjmx-con-li-p2{font-size: px2rem(20); color:#999;}
+.cjmx-con-li-p2 span{color: #eca847;font-size: px2rem(24);display: inline-block;vertical-align: middle;margin-top: px2rem(-20);}
+.cjmx-con-li-p2 span b{font-size: px2rem(38);display: inline-block; font-weight: normal; }
+
+// 收益说明
+.sysm-title,.sysm-con{padding:0 px2rem(20); }
+.sysm-con p{line-height: px2rem(40);}
+.sysm-title{ margin-top: px2rem(40); font-size: px2rem(28); margin-bottom: px2rem(10);}
+
+// 厂家促销首页
+.cx-index{ position: relative;}
+.cx-index-top{position: absolute; width: px2rem(400);height: px2rem(245); left:0; right:0; top:0; margin:0 auto;border-bottom: 1px solid #fff; }
+.cx-index-head {width: px2rem(120);height: px2rem(120); margin:0 auto px2rem(10); margin-top: px2rem(30); border-radius: 50%; border:3px solid #fff;}
+.cx-index-head img{border-radius: 50%; }
+.cx-index-top p{ text-align: center; color: #fff;}
+.xc-sy p{  color: #fff;font-size: px2rem(24); text-align: center;}
+.xc-sy p:last-child{margin-top: px2rem(-20)}
+.xc-sy p span{opacity: .7;filter: alpha(opacity=70);}
+.cx-sy-con{ color: #fff;font-size: px2rem(28); text-align: center; margin-top: px2rem(-20)}
+.cx-sy-con span{font-size: px2rem(90); margin-left: px2rem(-35)}
+.xc-sy{position: absolute;top:px2rem(280); left: 0; right: 0; margin:0 auto;}
+.cx-index-icon{ bottom: 0; position: absolute; width: 100%; background: rgba(255,255,255,.3); padding:px2rem(20) 0 px2rem(10);}
+.cx-index-icon img{height: px2rem(100);width: px2rem(100);}
+.cx-index-icon li { width: 33.333%; float: left; text-align: center;}
+.cx-index-icon li span{ display: block; text-align: center; color: #fff;font-size: px2rem(28); }
+// 发广告赚收益
+.sm-right{color: #6cbfe5; font-size: px2rem(24); position: absolute; right: px2rem(20); height: px2rem(80); line-height:px2rem(80); top:0; }
+.cx-fgg-bg{ background: #f8f8f8; padding-bottom: px2rem(20);}
+.cx-fgg-con{ background-color: #FFF; padding:px2rem(5) 0 0;}
+.cx-fgg-con h4{ padding:0 px2rem(20);line-height: px2rem(60); height: px2rem(60);font-size: px2rem(28);color: #333; font-weight: normal;}
+.cx-fgg-bottom{ margin-top: px2rem(15);padding:0 px2rem(20);}
+.cx-fgg-bottom p{ margin-bottom: px2rem(10);}
+.cx-fgg-list{border-top:1px solid #eee;overflow: hidden;}
+.cx-fgg-list a{ position: relative; display: inline-block; width: 33.333%;  text-align: center; color: #eca847; float: left; line-height: px2rem(70); height: px2rem(70); }
+.cx-fgg-list a:after{ position:absolute; content: ""; width: 1px; height: px2rem(27);background: #eca847; top:0; bottom: 0; margin: auto 0; right: 0;}
+.cx-fgg-list a:last-child:after{background: #fff;}
+//10元流量加油包
+.cx-ll-bg .cx-fgg-con h4{height: px2rem(90);line-height:px2rem(90); }
+.cx-ll-bg .cx-fgg-list a{line-height: px2rem(80); height: px2rem(80);}
+.cx-ll-bg .cx-fgg-bottom{margin-top: px2rem(40);}
+.mask{  position: fixed; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom:0; z-index: 1000;  background: rgba(0,0,0,0.8); display: none;}
+.share-img{ display: none; position: fixed;right:px2rem(20); width: px2rem(441);height: px2rem(357); top:0;z-index: 1001; }
+.cx-ewm{ display: none; position: absolute; width: px2rem(357);height: px2rem(357); left: 0; right: 0;top:0; bottom:0; z-index: 1001; margin:auto;border:px2rem(10) solid #fff;}
+.cx-close-btn{position: absolute; top:px2rem(-80); right:px2rem(-60); background: url(../images/cuxiao/cx-close-btn.png) no-repeat; height: px2rem(55);width: px2rem(55); background-size: 100%;}
+// 收益明细
+.symx-top{ background: -moz-linear-gradient(top, #8ee2d3 0%, #41c0bf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ee2d3), color-stop(100%,#41c0bf));
+    background: -webkit-linear-gradient(top, #8ee2d3 0%,#41c0bf 100%);
+    background: -o-linear-gradient(top, #8ee2d3 0%,#41c0bf 100%);
+    background: -ms-linear-gradient(top, #8ee2d3 0%,#41c0bf 100%);
+    background: linear-gradient(to bottom, #8ee2d3 0%,#41c0bf 100%); height: px2rem(283); width: 100%; position: relative;}
+.symx-bt {position: absolute; bottom: 0; width: 100%; background: #53b4b0;height: px2rem(95);padding-top: px2rem(10);}    
+.symx-bt li{ width: 50%; float: left; position: relative;}
+.symx-bt li:first-child:after{content: ""; height: px2rem(70);width: 1px; background: #fff; top:0; bottom:0; right: 0; margin:auto 0; position: absolute;}
+.symx-bt li p{ color:#fff; text-align: center;} 
+.symx-mid div{width: 50%; float: left;}
+.symx-mid div p{text-align: center;color: #fff; }
+.symx-mid-l{padding-top:px2rem(40);color: #fff; }
+.symx-mid-l span{ display: block;text-align: center;color: #fff; margin-bottom: px2rem(-10); }
+.symx-mid-l p{text-align: center; font-size: px2rem(70);color: #fff; }
+.symx-mid-r {padding-top:px2rem(80); }
+.symx-input{padding:px2rem(30) px2rem(20); border-bottom: 1px solid #eee;}
+.symx-input span{display: inline-block; padding:0 px2rem(8);}
+.symx-input input{display: inline-block; height: px2rem(60);border:1px solid #eee;line-height: px2rem(60); border-radius: px2rem(8);}
+.symx-input input[type="date"]{ width: px2rem(220); padding-left: 3px;}
+.symx-input input[type="button"]{width: px2rem(80); background: #fff;  color: #eca847; border-color: #eca847; margin-left: px2rem(30);}
+
+.symx-tabs{overflow: hidden; border-bottom:1px solid #eee;}
+.symx-tabs li{width: 50%; float: left; text-align: center; height: px2rem(90);  font-size: px2rem(28); line-height: px2rem(90);}
+.symx-tabs li.curr{border-bottom:3px solid #eca847; color: #eca847;}
+.symx-tab-con-li{padding:0 px2rem(20); clear: both;}
+.symx-tab-con-li h4{ border-bottom: 1px solid #eee; font-size: px2rem(28);line-height: px2rem(80);height: px2rem(80); font-weight: normal;}
+.symx-tab-con-li h4 span{line-height: px2rem(80);height: px2rem(80);}
+.symx-tab-con-li h4 b{background: url(../images/cuxiao/drop-down.png) no-repeat; background-size: 100%; height: px2rem(35);width: px2rem(35); display: inline-block; vertical-align: middle; margin-top:-3px}
+.mx-drop-list{padding:px2rem(25) 0; overflow: hidden; display: none;}
+.mx-drop-list li{width: 33.333%; text-align: center; float: left;}
+.mx-drop-list li  span{display: block; text-align: center; margin-bottom: px2rem(5);}
+.symx-tab-con-li.curr h4{ border:none; background: #eeeeee; padding:0 px2rem(20);}
+.symx-tab-con-li.curr{padding:0;}
+.symx-tab-con-li.curr .mx-drop-list{background:#f8f8f8;}
+.symx-tab-con-li.curr h4 b{background: url(../images/cuxiao/drop-up.png) no-repeat;background-size: 100%;}
+.symx-tab-con-li1 h4 b{background: url(../images/cuxiao/drop-right.png) no-repeat;background-size: 100%;}
+
+//短信推广
+.mess-edit{padding:px2rem(20);}
+.mess-edit-con{margin-bottom: px2rem(20); clear: both; overflow: hidden;}
+.mess-edit-con label,.mess-edit-con input,.mess-edit-con textarea{ display: inline-block;float: left;}
+.mess-edit-con label{width: px2rem(120); color: #666; text-align: right;height: px2rem(70); line-height:px2rem(70) }
+.mess-edit-con input,.mess-edit-con textarea{ color: #666; border:1px solid #eee; border-radius: px2rem(10); margin-left: 3px; width: px2rem(380); }
+.mess-edit-con textarea{min-height: px2rem(200); line-height:px2rem(70);padding:px2rem(3) px2rem(10) px2rem(10) px2rem(8);}
+.mess-edit-con input{ height: px2rem(70); line-height:px2rem(70) ;padding:px2rem(8);}
+.mess-edit-btn {text-align: center; position: fixed; bottom: 0; padding:px2rem(40) 0; width: 100%; left: 0; right: 0; margin:0 auto; max-width: px2rem(640); background: #fff;}
+.mess-edit-btn a{ display: inline-block;width: 80%; color: #eca847; border:1px solid #eca847;height: px2rem(70); line-height:px2rem(70) ; border-radius: px2rem(10); text-align: center; }
+
+
+
+
+

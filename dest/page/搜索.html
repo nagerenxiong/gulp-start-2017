@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/search20170309xyy.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="search">
+        <div class="search-wrap">
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <div class="search-input-wrap">
+                <!-- <img src="../images/icon-search.png" class="icon-search" /> -->
+                <a href="javaScript:void(0)" class="srch_up" id="choosedA">商品</a>
+                <ul class="nav-slide" id="chooseUl">
+                    <li class="nav-arrow"></li>
+                    <li><a href="javaScript:void(0)" onclick="setSearchHistory('0','1')"><i class="icon-nav-sp"></i>商品</a></li>
+                    <li><a href="javaScript:void(0)" onclick="setSearchHistory('1','1')"><i class="icon-nav-dp"></i>店铺</a></li>
+                </ul>
+                <input type="text" name="" value="" placeholder="输入搜索的店铺、宝贝" class="search-input">
+                <img src="../images/icon-search.png" class="icon-search-btn" />
+            </div>
+        </div>
+    </div>
+    <div class="search-content">
+        <dl>
+            <dt>历史搜索<img src="../images/icon-del.png" alt=""></dt>
+            <dd>
+                <a href="#">移动宽带</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>热门搜索</dt>
+            <dd>
+                <a href="#">查流量</a><a href="#">查话费</a><a href="#">账单</a><a href="#">国际漫游</a><a href="#">积分兑换</a><a href="#">买手机</a><a href="#">携号转网</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>热门商品</dt>
+            <dd>
+                <a href="#">苹果7</a><a href="#">华为荣耀</a><a href="#">一卡多号</a><a href="#">国际漫游</a><a href="#">积分兑换</a><a href="#">买手机</a><a href="#">携号转网</a>
+            </dd>
+        </dl>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(".srch_up").click(function() {
+            $(".nav-slide").slideToggle(20);
+            $(".modal-bg").toggle();
+        });
+        $(".nav-arrow").click(function() {
+            $(".nav-slide").slideUp(20);
+            $("..nav-slide").slideUp(20);
+        });
+        $(".modal-bg").click(function() {
+            $(".nav-slide").slideUp(20);
+            $(".nav-slide").slideUp(20);
+        });
+
+        function setSearchHistory(searchHisType, isCssMethod) {
+            // if (isCssMethod == "1") {
+            //     if (searchHisType == "0") {
+            //         $("#choosedA").html("商品");
+            //         $("#chooseUl").slideUp(20);
+            //         $(".modal-bg").toggle();
+            //     } else if (searchHisType == "1") {
+            //         $("#choosedA").html("店铺");
+            //         $("#chooseUl").slideUp(20);
+            //         $(".modal-bg").toggle();
+            //     }
+            // }
+            // //当搜索历史类型为空时,默认查询商品的,商品类型为0,店铺搜索历史类型为1
+            // if (searchHisType != null && searchHisType != "") {
+            //     $("#searchType").val(searchHisType);
+            // } else {
+            //     searchHisType = $("#searchType").val();
+            // }
+            // $("#searchType").val(searchHisType);
+            // $.ajax({
+            //     type: "POST",
+            //     url: "/hui/shoplist/getSearchHistoryByType",
+            //     data: {
+            //         searchHisType: searchHisType
+            //     },
+            //     dataType: "json",
+            //     timeout: 15000,
+            //     success: function(data) {
+            //         var cookieValue = data.searchHistory;
+            //         if (cookieValue != "") {
+            //             $("#searchHisUl").empty();
+            //             //因为后台保存时,为了去重,最后多加了一个",",所以显示时,需要先去掉","
+            //             var searchHisArr = cookieValue.substring(0, cookieValue.length - 1).split(",");
+            //             var searchHisHtml = "";
+            //             for (var i = 0; i < searchHisArr.length; i++) {
+            //                 searchHisHtml = searchHisHtml + "<li><a href=\"javascript:void(0)\" onclick=\" searchByHistory('" + searchHisArr[i] + "')\">" + searchHisArr[i] + "</a></li>";
+            //             }
+            //             $("#searchHisUl").append(searchHisHtml);
+            //         } else {
+            //             $("#searchHisUl").empty();
+            //         }
+            //     }
+            // });
+        }
+    </script>
+</body>
+
+</html>

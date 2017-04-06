@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>覆盖区域查询</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/kuandai20170329xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        @@include('../../component/top/nav.html',{"title":"覆盖区域查询"})
+       <div class="search-con-wrap">
+            <p class="p1">你要找的是：</p>
+            <p class="p2">南昌市 西湖区 XXXX小区 10栋 </p>
+            <div class="search-btn-wrap">
+                <a href="javascript:void(0)" class="search-btn">重新搜索</a>
+            </div>
+       </div>
+       <dl class="search-result-wrap">
+            <dt><img src="../../images/icon-search.png" class="search-icon" /> <span>搜索结果</span></dt>
+            <!--<dd>
+                <p class="p1">南昌市 西湖区 XXXX小区 10栋26楼 </p>
+                <p class="p2">光纤宽带 </p>
+            </dd>
+            <dd>
+                <p class="p1">南昌市 西湖区 XXXX小区 10栋26楼 </p>
+                <p class="p2">光纤宽带 </p>
+            </dd>
+            <dd>
+                <p class="p1">南昌市 西湖区 XXXX小区 10栋26楼 </p>
+                <p class="p2">光纤宽带 </p>
+            </dd>
+            <dd>
+                <p class="p1">南昌市 西湖区 XXXX小区 10栋26楼 </p>
+                <p class="p2">光纤宽带 </p>
+            </dd>-->
+            <dd class="null">
+                <img src="../../images/kuandai/kuandai-null.png" />
+                <p>该区域没有宽带覆盖</p>
+            </dd>
+       </dl>
+    </div>
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(".top-icon-right").click(function() {
+        $(".top .top-nav-slide").slideToggle(20);
+        $(".modal-bg").toggle();
+    });
+    $(".modal-bg").click(function() {
+        $(".top .top-nav-slide").slideUp(20);
+        $(".modal-bg").hide();
+    });
+    $(".top-nav-arrow").click(function() {
+        $(".top .top-nav-slide").slideUp(20);
+        $(".modal-bg").hide();
+    });
+    </script>
+</body>
+
+</html>

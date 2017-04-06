@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../../css/cx20170328hq.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+   
+</head>
+<body>
+<!-- top start -->
+    @@include('../../component/top/nav.html',{"title":"成交明细"})
+<!-- top end -->
+<!-- main start -->
+
+<div class="bg-f8"></div>
+<div class="cjmx-title">业务名称：<span>10元流量加油包</span></div>
+<div class="cjmx-con">
+    <ul>
+    <li><div class="cjmx-con-li"><p class="cjmx-con-li-p1">15180198551</p><p class="cjmx-con-li-p2">2016-01-09  12:45 <span class="fr"><b>100</b>.00</span></p></div></li>
+     <li><div class="cjmx-con-li"><p class="cjmx-con-li-p1">15180198551</p><p class="cjmx-con-li-p2">2016-01-09  12:45 <span class="fr"><b>100</b>.00</span></p></div></li>
+      <li><div class="cjmx-con-li"><p class="cjmx-con-li-p1">15180198551</p><p class="cjmx-con-li-p2">2016-01-09  12:45 <span class="fr"><b>10</b>.00</span></p></div></li>
+       <li><div class="cjmx-con-li"><p class="cjmx-con-li-p1">15180198551</p><p class="cjmx-con-li-p2">2016-01-09  12:45 <span class="fr"><b>10</b>.00</span></p></div></li>
+        <li><div class="cjmx-con-li"><p class="cjmx-con-li-p1">15180198551</p><p class="cjmx-con-li-p2">2016-01-09  12:45 <span class="fr"><b>10</b>.00</span></p></div></li>
+    </ul>
+</div>
+
+
+
+
+
+<!-- main end-->
+</body>
+ <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+         $(function(){
+
+             //top 下拉js
+             $(".top-icon-right").click(function() {
+  $(".top .top-nav-slide").slideToggle(20);
+  $(".center-top .top-nav-slidee").slideToggle(20);
+  $(".tip-search .top-nav-slide").hide();
+  $(".modal-bg").toggle();
+});
+
+$(".modal-bg").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+$(".top-nav-arrow").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+
+         })
+
+      </script>
+</html>

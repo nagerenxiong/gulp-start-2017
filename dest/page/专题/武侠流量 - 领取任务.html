@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>无敌爽翻 最高送20G</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <link rel="stylesheet" type="text/css" href="../../css/wuxia20170327xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../images/wuxia/wuxia-gz.png" class="lq-tip" />
+        <img src="../../images/wuxia/wuxia-font3.png" class="modal1-title">
+        <img src="../../images/wuxia/wuxia-hua.png" class="hua1 hua1-anime" />
+        <img src="../../images/wuxia/wuxia-hua1.png" class="hua2 hua2-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua3 hua3-anime" />
+        <img src="../../images/wuxia/wuxia-hua1.png" class="hua4 hua4-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua5 hua5-anime" />
+        <img src="../../images/wuxia/wuxia-hua2.png" class="hua6 hua6-anime" />
+    </div>
+    <div class="modal1">
+        <div class="modal-wrap">
+            <img src="../../images/wuxia/wuxia-font2.png" class="modal-title">
+            <div class="rw-wrap">
+                <span class="sy-num">2</span>
+                <span class="hz-num">2</span>
+            </div>
+        </div>
+        <a href="武侠流量 - 任务目标.html"><img src="../../images/wuxia/wuxia-btn4.png" / class="lq-btn shake1"></a>
+    </div>
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <script>
+        var height = $(".modal1").height();
+        var countDelta = 0;
+        var runNum = 0;
+
+        function moveToNext() {
+            var start = null;
+            var lastTimestamp = null;
+            var delta = 0;
+            return function req(timestamp) {
+                if (start === null) {
+                    start = timestamp;
+                    lastTimestamp = timestamp;
+                }
+                delta = timestamp - lastTimestamp;
+                countDelta += delta;
+                lastTimestamp = timestamp;
+                var stop = requestAnimationFrame(req);
+                var timesNum = 10;
+                if (countDelta > timesNum) {
+                    runNum = runNum + 15;
+                    $(".modal1").height(runNum);
+                    if (runNum > height) {
+                        window.cancelAnimationFrame(stop);
+                        $(".modal1").removeAttr("style");
+                    }
+                    countDelta = 0;
+                }
+            }
+        }
+        $(".modal1").css("height", 0).addClass("show");
+        requestAnimationFrame(moveToNext())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,600 @@
+@charset "utf-8";
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    word-wrap: break-word;
+    word-break: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 150%;
+    font-family: "宋体", Verdana, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: .6rem;
+}
+
+body,
+html {
+    height: 100%
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.show {
+    display: block !important;
+    visibility: visible !important;
+}
+
+@function px2rem($px) {
+    @return $px*320/$designWidth/20+rem;
+}
+
+.container {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+em {
+    font-style: normal;
+}
+
+$designWidth: 640;
+.title {
+    display: block;
+    width: px2rem(461);
+    position: absolute;
+    top: px2rem(35);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.font {
+    position: absolute;
+    right: px2rem(75);
+    top: 50%;
+    transform: translateY(-50%);
+    width: px2rem(85);
+    height: px2rem(465);
+    background: url(../images/wuxia/wuxia-font.png) no-repeat center center;
+    background-size:100% 100%;
+    span{
+        color:#0b121c;
+        font-size: px2rem(30);
+        width: px2rem(20);
+        display: block;
+        font-weight: bold;
+        line-height: px2rem(35);
+        margin-left: px2rem(3);
+        margin-top: px2rem(260);
+    } 
+}
+
+.container {
+    max-width: 640px;
+    width: 16rem;
+    margin: 0 auto;
+    background: url(../images/wuxia/wuxia-banner.png) no-repeat center center;
+    background-size: 100% 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lingqu {
+    position: absolute;
+    right: px2rem(30);
+    width: px2rem(345);
+    bottom: px2rem(80);
+}
+
+.modal {
+    background: url(../images/wuxia/wuxia-hb.png) no-repeat center top;
+    background-size: 100% 100%;
+    width: px2rem(580);
+    height: px2rem(800);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .tip {
+        width: px2rem(120);
+        position: absolute;
+        right: px2rem(-30);
+        top: px2rem(-50);
+    }
+    .modal-wrap {
+    overflow-y: scroll;
+    height: px2rem(700);
+    margin-top: px2rem(70);
+    }
+}
+
+.modal1-title {
+    width: px2rem(230);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: px2rem(35);
+}
+
+.lq-tip {
+    width: px2rem(120);
+    position: absolute;
+    right: 0;
+    top: px2rem(35);
+}
+.lq-btn {
+        width: px2rem(330);
+        margin: px2rem(250) auto auto;
+        display: block;
+    }
+
+.modal1 {
+    background: url(../images/wuxia/wuxia-hb1.png) no-repeat center top;
+    background-size:cover;
+    width: px2rem(580);
+    height: px2rem(755);
+    overflow: hidden;
+    position: absolute;
+    top: px2rem(120);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    .modal-wrap {
+        margin-top: px2rem(70);
+    }
+}
+
+
+
+.modal-title {
+    display: block;
+    margin: 0 auto;
+    width: px2rem(375);
+}
+
+.modal-sub {
+    color: #2d343d;
+    font-size: px2rem(20);
+    text-align: center;
+    font-weight: bold;
+    font-family: "宋体";
+    margin-top: px2rem(8);
+}
+
+.modal-progress {
+    display: table;
+    margin: 0 auto;
+    >div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.progress-status-logo {
+    width: px2rem(110);
+}
+
+.progress-num {
+    text-align: right;
+}
+
+.progress-bar-warap {
+    position: relative;
+    .bg-bar {
+        width: px2rem(370);
+        height: px2rem(37);
+        background: url(../images/wuxia/wuxia-jdt.png) no-repeat center center;
+        background-size: 100% 100%;
+    }
+    .progress-bar {
+        width: px2rem(370);
+        height: px2rem(37);
+        background: url(../images/wuxia/wuxia-jdt1.png) no-repeat left center;
+        background-size: 100% 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.progress-info {
+    color: #2d343d;
+    font-size: px2rem(20);
+    font-family: "宋体";
+    text-align: center;
+}
+
+.modal-btn-wrap {
+    text-align: center;
+    margin-top: px2rem(20);
+    .btn-flow {
+        background: url(../images/wuxia/wuxia-btn1.png) no-repeat center center;
+            background-size:100% 100%; 
+        font-size: px2rem(26);
+       color: #929292; 
+        text-align: center;
+        display: inline-block;
+        text-align: center;
+        width: px2rem(270);
+        height: px2rem(60);
+        border-radius: 10px;
+        line-height: px2rem(60);
+        &.active{
+            background:none;
+            background-color: #d5b10e;
+            color: #da0400;
+            
+        }
+    }
+}
+
+.list {
+    overflow: hidden;
+    width: px2rem(500);
+    margin: px2rem(50) auto auto;
+    .list-title {
+        img {
+            width: px2rem(150);
+            margin-left: px2rem(22);
+        }
+    }
+    dd {
+        float: left;
+        text-align: center;
+        margin: px2rem(15) px2rem(22) 0 px2rem(22);
+        img {
+            width: px2rem(120);
+            height: px2rem(150);
+        }
+        p{
+            color: #2d343d;
+            font-size: px2rem(24);
+            font-family: "宋体";
+            font-weight: bold;
+        }
+        P:nth-child(2){
+            margin-top: px2rem(20);
+        }
+    }
+}
+
+.list1 {
+    background: url(../images/wuxia/wuxia-adv1.png) no-repeat center center;
+    background-size: 100% 100%;
+    width: px2rem(470);
+    text-align: center;
+    margin: px2rem(20) auto auto;
+    padding: px2rem(20) 0;
+    img {
+        width: px2rem(220);
+        height: px2rem(110);
+    }
+}
+
+.pro {
+    width: px2rem(476);
+    height: px2rem(224);
+    background: url(../images/wuxia/wuxia-adv.png) no-repeat center center;
+    background-size: 100% 100%;
+    margin: px2rem(30) auto auto;
+    padding: px2rem(15);
+}
+
+.modal-wrap1 {
+    .photo {
+        width: px2rem(445);
+        height: px2rem(234);
+        background: url(../images/wuxia/wuxia-tx.png) no-repeat center center;
+        background-size: 100% 100%;
+        margin: px2rem(60) auto auto;
+        text-align: center;
+        color: #fff;
+        padding-top: px2rem(110);
+        padding-right: px2rem(10);
+        img {
+            width: px2rem(90);
+        }
+    }
+    .info {
+        background: url(../images/wuxia/wuxia-font4.png) no-repeat center center;
+        background-size: 100% 100%;
+        width: px2rem(486);
+        height: px2rem(438);
+        margin: px2rem(40) auto auto;
+        position: relative;
+        .num{
+            color: #b2212a;
+            font-size: px2rem(130);
+             font-weight: bold;
+            position: absolute;
+            top: px2rem(65);
+            right:px2rem(360);
+        }
+    }
+    .btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: px2rem(40);
+        width: px2rem(396);
+        margin-left: px2rem(-180);
+    }
+}
+
+.rw-wrap {
+    width: px2rem(520);
+    height: px2rem(119);
+    background: url(../images/wuxia/wuxia-rw.png) no-repeat center center;
+    background-size: 100% 100%;
+    margin: px2rem(50) auto auto;
+    position: relative;
+    .sy-num {
+        position: absolute;
+        color: #fff;
+        font-size: px2rem(36);
+        right: px2rem(135);
+        top: px2rem(5);
+    }
+    .hz-num {
+        position: absolute;
+        color: #fff;
+        font-size: px2rem(50);
+        right: px2rem(120);
+        top: px2rem(39);
+    }
+}
+
+.show {
+    display: block!important;
+}
+.share-img{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width: 80%;
+    display: none;
+    z-index: 10001;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: .8;
+    top:0;
+    left:0;
+    display: none;
+    z-index:10000;
+    background-color: #000;
+}
+.hua1,.hua2,.hua3,.hua4,.hua5,.hua6{
+    position: absolute;
+    z-index: 9999;
+}
+.hua1{
+    right:px2rem(100);
+    top:px2rem(10);
+    width: px2rem(70);
+    transform: translateY(px2rem(-200))
+}
+.hua2{
+    right:px2rem(50);
+     top:px2rem(200);
+     width: px2rem(60);
+     transform: translateX(px2rem(200))
+}
+.hua3{
+    right:px2rem(100);
+     top:px2rem(500);
+     width: px2rem(60);
+      transform: translateX(px2rem(200))
+}
+.hua4{
+    right:px2rem(100);
+    top:px2rem(10);
+    width: px2rem(70);
+    transform: translateY(px2rem(-200))
+}
+.hua5{
+    right:px2rem(50);
+     top:px2rem(200);
+     width: px2rem(60);
+     transform: translateX(px2rem(200))
+}
+.hua6{
+    right:px2rem(100);
+     top:px2rem(500);
+     width: px2rem(60);
+      transform: translateX(px2rem(200))
+}
+.hua1-anime {
+    animation-name: hua1;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:1s;
+}
+.hua2-anime {
+    animation-name: hua2;
+    animation-duration:6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:1s;
+}
+.hua3-anime {
+    animation-name: hua3;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:1s;
+}
+.hua4-anime {
+    animation-name: hua4;
+    animation-duration:5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:5s;
+}
+.hua5-anime {
+    animation-name: hua5;
+    animation-duration:6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:6s;
+}
+.hua6-anime {
+    animation-name: hua6;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay:7s;
+}
+
+@keyframes hua1 {
+    0% {
+        transform: translate3d(px2rem(200), px2rem(-200), 0) ;
+    }
+    
+    100% {
+        transform: translate3d(px2rem(-900), px2rem(600), 0) scale3d(1.2,1.2,1.2);
+    }
+}
+@keyframes hua2 {
+      0% {
+         transform: translate3d(px2rem(200), px2rem(-200), 0) scale3d(1,1,1);
+    }
+  
+    100% {
+        transform: translate3d(px2rem(-300), px2rem(1000), 0) scale3d(1.2,1.2,1.2);
+    }
+}
+@keyframes hua3 {
+     0% {
+         transform: translate3d(px2rem(200), px2rem(-200), 0) rotate(0);
+    }
+  
+    100% {
+        transform: translate3d(px2rem(-500), px2rem(1000), 0) rotate(360deg);
+    }
+}
+@keyframes hua4 {
+    0% {
+        transform: translate3d(px2rem(200), px2rem(-200), 0) scale3d(1,1,1);
+    }
+   
+    100% {
+        transform: translate3d(px2rem(-600), px2rem(1000), 0) scale3d(1.2,1.2,1.2);
+    }
+}
+@keyframes hua5 {
+      0% {
+         transform: translate3d(px2rem(200), px2rem(-200), 0) rotate(0deg);
+    }
+    
+    100% {
+        transform: translate3d(px2rem(-700), px2rem(1000), 0)rotate(360deg);
+    }
+}
+@keyframes hua6 {
+     0% {
+         transform: translate3d(px2rem(200), px2rem(-200), 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(px2rem(-900), px2rem(600), 0) rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+    100% {
+        transform: translate3d(10px, 0, 0) scale3d(.9, .9, .9);
+    }
+}
+@keyframes shake1 {
+    0% {
+        transform: scale3d(1, 1, 1);
+        transform-origin: center center;
+    }
+    100% {
+        transform: scale3d(.9, .9, .9);
+         transform-origin: center center;
+    }
+}
+
+@keyframes boxshadow {
+    0% {
+        border: 5px solid #ffba35;
+        box-shadow: 0 0 20px 3px #ffba35;
+    }
+    100% {
+        border: 5px solid #35faff;
+        box-shadow: 0 0 20px 3px #35faff;
+    }
+}
+.shake {
+    animation-name: shake;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.shake1 {
+    animation-name: shake1;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.boxshadow {
+    animation-name: boxshadow;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}

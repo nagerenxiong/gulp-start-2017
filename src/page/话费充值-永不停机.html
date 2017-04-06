@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>永不停机</title>
+    <link rel="stylesheet" type="text/css" href="../css/qmchongzhi20170313zx.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+      @@include('../component/top/index.html',{"title":"永不停机"})
+      
+   <div class="navertj">
+   		<div class="myinfor">
+   			<img src="../images/chongzhi/qmicon.jpg" />*雁 15180198551
+   		</div>
+   		<div class="forms">
+   			<div class="topselect select-icon"><!--禁用下拉选择时就移除 select-icon --->
+   				<p>选择自动充值</p>
+   				<select ><!------禁用状态添加  disabled="disabled" 并移除父级的 select-icon ----->
+   					<option id="zdzdxf">账单自动续费</option>
+   					<option id="yebzcz">余额不足充值</option>
+   					<option id="dsdecz">定时定额充值</option>
+   				</select>
+   			</div>
+   			<div class="nextselect" id="zhangdan"><!--禁用下拉选择时就移除 select-icon --->
+   				<p>每月账单</p>
+   				<select><!------禁用状态添加  disabled="disabled" 并移除父级的 select-icon ----->
+   					<option>每月5号前</option>
+   				</select>
+   			</div>
+   			<div class="nextselect select-icon hide" id="yuebz"><!--禁用下拉选择时就移除 select-icon --->
+   				<p>余额不足</p>
+   				<select><!------禁用状态添加  disabled="disabled" 并移除父级的 select-icon ----->
+   					<option>5元</option>
+   					<option>10元</option>
+   					<option>50元</option>
+   					<option>100元</option>
+   				</select>
+   			</div>
+   			<div class="nextselect select-icon hide" id="dingshi"><!--禁用下拉选择时就移除 select-icon --->
+   				<p>每月账单</p>
+   				<select><!------禁用状态添加  disabled="disabled" 并移除父级的 select-icon ----->
+   					<option>每月1号</option>
+   					<option>每月2号</option>
+   					<option>每月3号</option>
+   					<option>每月4号</option>
+   					<option>每月5号</option>
+   					<option>每月6号</option>
+   					<option>每月7号</option>
+   					<option>每月8号</option>
+   					<option>每月9号</option>
+   					<option>每月10号</option>
+   					<option>每月11号</option>
+   					<option>每月12号</option>
+   					<option>每月13号</option>
+   					<option>每月14号</option>
+   					<option>每月15号</option>
+   					<option>每月16号</option>
+   					<option>每月17号</option>
+   					<option>每月18号</option>
+   					<option>每月19号</option>
+   					<option>每月20号</option>
+   					<option>每月21号</option>
+   					<option>每月22号</option>
+   					<option>每月23号</option>
+   					<option>每月24号</option>
+   					<option>每月25号</option>
+   					<option>每月26号</option>
+   					<option>每月27号</option>
+   					<option>每月28号</option>
+   					<option>每月29号</option>
+   					<option>每月30号</option>
+   					<option>每月31号</option>
+   				</select>
+   			</div>
+   			<div class="nextselect select-icon">
+   				<p>充值金额</p>
+   				<select>
+   					<option>20元</option>
+   					<option>50元</option>
+   					<option>100元</option>
+   					<option>200元</option>
+   				</select>
+   			</div>
+   		</div>
+   		
+   </div>
+   
+   
+    <div class="footerbtn2">
+    	<div class="xiey"><i></i>同意<span class="blue">《代扣协议》</span></div>
+  	 	<a href="##" class="button button-big">确认开通</a>
+   		
+   </div>
+   
+   <div class="footerbtn2" style="display: none;"><!--开通成功后显示一下两个按钮 --->
+    	<div class="btn2x">
+  	 	<a href="##" class="button button-big">取消业务</a>
+  	 	<a href="##" class="button button-big">修改设置</a>
+   		</div>
+   </div>
+   
+ 
+   
+   <!------弹层------>
+ <div class="dialog_center" id="dialog_center1" name="dialog">
+    <h3>开通成功</h3>
+    <p>已为您开通永不停机业务 </p>
+    <div class="dialog_footer ">
+    <a href="javascript:void(0)" class="button button-big">我知道了</a>
+    </div>
+    <i class="close_btn"></i>
+</div>
+ 
+<div class="dialog_bg" name="dialog"></div>
+
+  <!------弹层------>  
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+  <script>
+ 
+  		$(".footerbtn2 .button").click(function(){
+  		  $("#dialog_center1").addClass("show") ;
+  		  $(".dialog_bg").addClass("show") ;
+  		
+  	});
+  		$(".close_btn").click(function(){
+  		  $("[name=dialog]").removeClass("show") ;
+  		 
+  		
+  	});
+  		$(".topselect select").change(function(){  
+  
+    if($("#zdzdxf").is(":selected")){
+     $("#zhangdan").removeClass("hide");
+      $("#yuebz").addClass("hide");
+       $("#dingshi").addClass("hide");
+   };
+   if($("#yebzcz").is(":selected")){
+     $("#zhangdan").addClass("hide");
+      $("#yuebz").removeClass("hide");
+       $("#dingshi").addClass("hide");
+   };
+   if($("#dsdecz").is(":selected")){
+     $("#zhangdan").addClass("hide");
+      $("#yuebz").addClass("hide");
+       $("#dingshi").removeClass("hide");
+   }
+  
+});  
+  		
+  </script>
+</body>
+
+</html>

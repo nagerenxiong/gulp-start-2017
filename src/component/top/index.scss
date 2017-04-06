@@ -1,0 +1,115 @@
+.top {
+	height: px2rem(80);
+
+	.top-wrap {
+		width: 100%;
+		height: px2rem(80);
+		background-color: #fff;
+		max-width:16rem;
+		h1 {
+			font-size: px2rem(32);
+			color: #333;
+			line-height: px2rem(80);
+			text-align: center;
+			font-weight: normal;
+		}
+		position: fixed;
+		z-index: 999;
+	}
+}
+.icon-left {
+	position: absolute;
+	left: px2rem(15);
+	top: 50%;
+	transform: translateY(-50%);
+	width: px2rem(20);
+	height: px2rem(40);
+	background: url(../images/back.png) no-repeat center center;
+	background-size: 100% 100%;
+	z-index: 2;
+	display: block;
+}
+.top-icon-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: px2rem(80);
+	height: px2rem(80);
+	z-index: 2;
+	background: url(../images/more.png) no-repeat center center;
+	background-size: 50%;
+}
+.top-nav-slide {
+	position: absolute;
+	right: 0;
+	top: px2rem(70);
+	width: px2rem(260);
+	background-color: #666;
+	border-radius: 4px;
+	overflow: inherit !important;
+	padding: px2rem(10) px2rem(20) px2rem(20) px2rem(40);
+	display: none;
+	z-index: 9999;
+
+	.top-nav-arrow {
+		border: px2rem(20) solid transparent;
+		border-bottom-color: #666;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: px2rem(-36);
+		right: px2rem(20);
+		z-index: 1;
+		cursor: pointer;
+	}
+	i{
+		float: left;
+		background: url(../images/dp-icon-all.png) no-repeat;
+	    background-size: 85%;
+	    width:px2rem(40);
+	    height:px2rem(40);
+	    margin-top: px2rem(18);
+	    margin-right: px2rem(5);
+	}
+	i.top-nav-home{
+		background-position: 0 px2rem(-40);
+	}
+	i.top-nav-zd{
+		background-position: 0 px2rem(-386);
+	}
+	i.top-nav-sys{
+		background-position: 0 px2rem(-446);
+	}
+	i.top-nav-llian{
+		background-position: 0 px2rem(-502);
+	}
+	i.top-nav-wo{
+		background-position: 0 px2rem(-276);
+	}
+}
+.top-nav-slide li {
+	height: px2rem(70);
+	line-height: px2rem(70);
+}
+.top-nav-slide li:last-child a{
+	border-bottom:none;
+}
+.top-nav-slide li a {
+	display: block;
+	line-height: px2rem(70);
+	width: 100%;
+	color: #fff;
+	text-align: left;
+	border-bottom: 1px solid #999;
+	font-size: px2rem(28);
+}
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: none;
+    background-color: transparent;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>非宽带用户专区</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/kuandai20170329xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+    <style>
+        .highcharts-root {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-wrap">
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <a class="top-icon-right"></a>
+            <h1>移动宽带</h1>
+            <ul class="top-nav-slide">
+                <li class="top-nav-arrow"></li>
+                <li><a href="/hui/release/home/index.html"><i class="top-nav-home"></i>首页</a></li>
+                <li><a href="/hui/shopFinds/init"><i class="top-nav-zd"></i>找店</a></li>
+                <li><a href="/hui/shua/index"><i class="top-nav-sys"></i>转转贝</a></li>
+                <li><a href="/hui/flow/queryGprs"><i class="top-nav-llian"></i>流量</a></li>
+                <li><a href="/hui/user/usercenter/showUserCenter"><i class="top-nav-wo"></i>我</a></li>
+            </ul>
+            <div class="modal-bg" style="display: none;"></div>
+        </div>
+    </div>
+
+    <div class="content1">
+        <div class="banner-wrap">
+            <img src="../../images/kuandai/kuandai-banner.png" />
+        </div>
+        <div class="btn-xf-wrap">
+            <a href="javascript:void(0)" class="btn-xf">立即办理</a>
+        </div>
+        <div class="domain-menu">
+            <a href="覆盖区域查询.html">
+                <img src="../../images/kuandai/icon-qycx.png" />
+                <p>覆盖地区域查询</p>
+            </a>
+            <a href="覆盖区域查询-搜索.html">
+                <img src="../../images/kuandai/icon-jdcx.png" />
+                <p>安装进度查询</p>
+            </a>
+            <a href="#">
+                <img src="../../images/kuandai/icon-zxkf.png" />
+                <p>在线客服</p>
+            </a>
+        </div>
+    </div>
+    <dl class="content2 floor">
+        <dt class="floor-title"><img src="../../images/kuandai/icon-cpxq.png" alt="" class="floor-icon"><span class="floor-title-name">产品选择</span></dt>
+        <dd class="list-recommend">
+            <div class="shop-layout-2and2">
+                <div>
+                    <div>
+                        <img src="../../images/temp/pro3.jpg">
+                    </div>
+                    <div>
+                        <img src="../../images/temp/pro3.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="../../images/temp/pro3.jpg">
+                    </div>
+                    <div>
+                        <img src="../../images/temp/pro3.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </dd>
+    </dl>
+    <div class="index-bottom">
+        <span>这是我的底线</span>
+    </div>
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".top-icon-right").click(function() {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function() {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+    </script>
+</body>
+
+</html>

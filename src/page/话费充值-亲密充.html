@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>亲密充</title>
+    <link rel="stylesheet" type="text/css" href="../css/qmchongzhi20170313zx.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+      @@include('../component/top/index.html',{"title":"亲密充"})
+      
+   <div class="mantop">
+   	<img src="../images/chongzhi/qm_03.jpg">
+   	<h3>一家人的话费我全包了</h3>
+   	<p>为号码设置提醒，开通自动充值免去停机烦恼</p>
+   </div>
+   
+   <div class="number-list">
+   	<ul>
+   		<li>
+   			<div class="card">
+   			<img src="../images/chongzhi/qmicon.jpg" />
+   			<h4>自己</h4>
+   			<em>15180198551</em>
+   			
+   			<p class="yue">余额：<span class="fs14">52</span>元</p>
+   			</div>
+   			<a href="##" class="btn">去充值</a>
+   		</li>
+   		<li>
+   			<a href="话费充值-亲密充-修改号码.html" class="card">
+   			<img src="../images/chongzhi/qmicon.jpg" />
+   			<h4>老婆</h4>
+   			<em>15180198551</em>
+   			
+   			<p class="yue red">欠费：<span class="font-14">52</span>元</p>
+   			</a>
+   			<span class="delet"></span>
+   			<a class="btn">去充值</a>
+   		</li>
+   		<li> 
+   			<a href="话费充值-亲密充-修改号码.html" class="card">
+   			<img src="../images/chongzhi/qmicon.jpg" />
+   			<h4>老爸</h4>
+   			<em>15180198551</em>
+   			
+   			<p class="yue">余额：<span class="font-14">52</span>元</p>
+   			</a>
+   			<span class="delet"></span>
+   			<a class="btn">去充值</a>
+   		</li>
+   	</ul>
+   </div>
+   
+   <div class="footerbtn">
+   	<a href="##" class="btn">添加一个新号码</a>
+   </div>
+   
+   <!------弹层------>
+ <div class="dialog_center" id="dialog_center1" name="dialog">
+    <h3>是否删除</h3>
+    <p>老婆 15180198551 </p>
+    <div class="dialog_footer btn2x">
+    <a href="javascript:void(0)" class="button button-big">是</a>
+    <a href="javascript:void(0)" class="button button-big" name="closeall">否</a>
+
+    </div>
+    <i class="close_btn"></i>
+</div>
+ 
+<div class="dialog_bg" name="dialog"></div>
+
+  <!------弹层------>  
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+  <script>
+  	$(".gztiter").click(function(){
+  		$(".gz-text").toggleClass("show") 
+  		var h = $(document).height()-$(window).height();
+ 		 $(document).scrollTop(h);
+  	});
+  		$(".delet").click(function(){
+  		  $("#dialog_center1").addClass("show") ;
+  		  $(".dialog_bg").addClass("show") ;
+  		
+  	});
+  		$(".close_btn").click(function(){
+  		  $("[name=dialog]").removeClass("show") ;
+  		 
+  		
+  	});
+  		$(".dialog_bg").click(function(){
+  		 $("[name=dialog]").removeClass("show"); 
+  		
+  	});
+  	$("[name=closeall]").click(function(){
+  		 $("[name=dialog]").removeClass("show"); 
+  		
+  	})
+  		
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>集5贝兑2000M</title>
+    <link rel="stylesheet" type="text/css" href="../css/jibeibei20170309zx.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-wrap">
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <h1>集5贝兑2000M</h1>
+        </div>
+    </div>
+    <div class="jbb-top">
+        <div class="jbb-bg">
+            <div class="beibei1 win">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+            <div class="beibei2 win">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+            <div class="beibei3 win">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+            <div class="beibei4 none">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+            <div class="beibei5 none">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+            <div class="beibei6">
+                <p class="bei1"></p>
+                <p class="addbei"></p>
+            </div>
+        </div>
+        <div class="jbb-button">
+            <a href="#" class="button button-big">兑换2000M </a>
+        </div>
+    </div>
+
+    <div class="jbb-box">
+        <h3></h3>
+        <ul>
+            <li>
+                <span>转转贝获赠贝贝</span>
+                <em>02-23 下午 5:40</em>
+            </li>
+            <li>
+                <span>转转贝获赠贝贝</span>
+                <em>02-23 下午 5:40</em>
+            </li>
+            <li>
+                <span>转转贝获赠贝贝</span>
+                <em>02-23 下午 5:40</em>
+            </li>
+        </ul>
+        <div class="hdgz">
+            <a class="gztiter">活动规则</a>
+            <div class="gz-text hide">
+                <p>1、用户每月通过集齐五个贝贝，即可兑换2000M流量包一个。</p>
+                <p>2、集贝贝活动以自然月为单位进行，贝贝数量次月清零。每月最多可兑换一次。</p>
+                <p>3、铁杆会员每月1号默认发放贝贝2个，铁丝会员发放1个。</p>
+                <p>4、普通粉丝可通过转转贝抽到贝贝。</p>
+                <p>5、二期计划用户还可通过完成特定的业务动作获取贝贝。</p>
+            </div>
+        </div>
+    </div>
+    <!------弹层------>
+    <div class="dialog_center" id="dialog_center1" name="dialog">
+        <h3>兑换失败</h3>
+        <p>还有贝贝没有进入口袋，加油去找出他们来吧！ </p>
+        <div class="dialog_footer">
+            <a href="javascript:void(0)" class="button button-big">朕知道了</a>
+        </div>
+        <i class="close_btn"></i>
+    </div>
+    <div class="dialog_center" id="dialog_center2" name="dialog">
+        <h3>兑换成功</h3>
+        <p>2000M流量兑换成功，具体受理结果以短信为准。 </p>
+        <div class="dialog_footer">
+            <a href="javascript:void(0)" class="button button-big">朕知道了</a>
+        </div>
+        <i class="close_btn"></i>
+    </div>
+    <div class="dialog_bg" name="dialog"></div>
+
+    <!------弹层------>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".gztiter").click(function() {
+            $(".gz-text").toggleClass("show")
+            var h = $(document).height() - $(window).height();
+            $(document).scrollTop(h);
+        });
+        $(".jbb-button a").click(function() {
+            $("#dialog_center1").addClass("show");
+            $(".dialog_bg").addClass("show");
+
+        });
+        $(".close_btn").click(function() {
+            $("[name=dialog]").removeClass("show");
+
+
+        });
+        $(".dialog_bg").click(function() {
+            $("[name=dialog]").removeClass("show");
+
+        })
+    </script>
+</body>
+
+</html>

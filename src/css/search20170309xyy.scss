@@ -1,0 +1,219 @@
+@import "common";
+@mixin mt20 {
+    margin-top: px2rem(20)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    height: px2rem(80);
+    width: 16rem;
+    .search-wrap {
+        width: 16rem;
+        height: px2rem(80);
+        background-color: #fff;
+        position: fixed;
+        .search-input-wrap {
+            font-size: px2rem(32);
+            color: #333;
+            text-align: center;
+            font-weight: normal;
+            width: px2rem(565);
+            height: px2rem(60);
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin: px2rem(10) 0 px2rem(10) px2rem(60);
+            text-align: left;
+            position: relative;
+        }
+    }
+}
+
+.icon-left {
+    position: absolute;
+    left: px2rem(15);
+    top: 50%;
+    transform: translateY(-50%);
+    width: px2rem(20);
+    height: px2rem(40);
+    background: url(../images/back.png) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 2;
+    display: block;
+}
+
+.icon-search {
+    width: px2rem(30);
+    float: left;
+    margin-top: px2rem(15);
+    margin-left: px2rem(15);
+}
+
+.srch_up {
+    height: px2rem(60);
+    line-height: px2rem(60);
+    width: px2rem(80);
+    padding-right: px2rem(10);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: none;
+    background-color: transparent;
+}
+
+.srch_up:after {
+    border: 5px solid transparent;
+    border-top: 5px solid #333;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    content: "";
+}
+
+.icon-search-btn {
+    width: px2rem(25);
+    float: right;
+    margin-top: px2rem(15);
+    margin-right: px2rem(15);
+}
+
+.search-input {
+    height: 1.4rem;
+    margin-top: px2rem(0.05rem);
+    float: left;
+    margin-left: px2rem(80);
+    color: #999;
+    width: px2rem(390);
+}
+
+.nav-slide {
+    position: absolute;
+    top: px2rem(70);
+    width: px2rem(200);
+    border-radius: 4px;
+    overflow: inherit!important;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: px2rem(10) px2rem(20) px2rem(20) px2rem(40);
+    display: none;
+    z-index: 9999;
+    left: px2rem(-16);
+    background-color: #666;
+    padding-left: px2rem(20);
+}
+
+.nav-arrow {
+    left: px2rem(40);
+    border-bottom-color: #666;
+}
+
+.nav-slide .nav-arrow {
+    border: px2rem(20) solid transparent;
+    border-bottom-color: #666;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: px2rem(-40);
+    right: px2rem(24);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.nav-slide li {
+    height: px2rem(70);
+    line-height: px2rem(70);
+}
+
+.nav-slide li:last-child {
+    a {
+        border-bottom: none;
+    }
+}
+
+.nav-slide li a {
+    display: block;
+    line-height: px2rem(70);
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    padding-left: px2rem(20);
+    border-bottom: 1px solid #999;
+    i {
+        width: px2rem(40);
+        height: px2rem(40);
+    }
+}
+
+.icon-nav-sp {
+    background: url(../images/icon-sp.png) no-repeat;
+    -webkit-background-size: 90% 90%;
+    background-size: 90%;
+}
+
+.icon-nav-dp {
+    background: url(../images/icon-dp.png) no-repeat;
+    -webkit-background-size: 90% 90%;
+    background-size: 90%;
+}
+
+.nav-slide li [class*=icon-nav-] {
+    float: left;
+    margin-top: px2rem(18);
+    margin-right: px2rem(10);
+}
+
+.search-content {
+    border-top: px2rem(20) solid #eee;
+    // padding: 0 px2rem(15);
+    padding-left:px2rem(15);
+    dl {
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: px2rem(25);
+        margin-top: px2rem(10);
+        dt {
+            color: #333;
+            font-size: px2rem(28);
+            img {
+                float: right;
+                width: px2rem(30);
+                margin-top: px2rem(5);
+            }
+        }
+        dd {
+            margin-top: px2rem(10);
+        }
+        a {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: px2rem(22);
+            color: #666;
+            padding: px2rem(10) px2rem(25);
+            margin-right: px2rem(15);
+            margin-bottom: px2rem(6);
+        }
+    }
+    dl:last-child {
+        border-bottom: 0;
+    }
+}

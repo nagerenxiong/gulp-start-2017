@@ -1,0 +1,141 @@
+@import "common";
+@import "../component/model/model"; 
+@import "../component/top/index";
+ body {  
+    background-color: #fff;
+	overflow-x:hidden;} 
+.uptop{
+	position:relative;
+	height: px2rem(1070);
+	background: url(../images/wangling/wlbg.jpg) no-repeat;
+	background-size: 100% 100%; 
+	.wlindex{
+		position: absolute;
+		z-index: 5;
+		background: url(../images/wangling/wlbanner.png) no-repeat;
+		height: px2rem(526);
+		width: px2rem(529);
+		background-size: 100% 100%;
+		display: block;
+		top:  px2rem(117);
+		left: px2rem(56);
+		text-align: center;
+		.text{
+			margin-top: px2rem(410);
+			p{
+				color: #faec6c;
+				b{
+					color: #fff;
+					font-size: 1rem;
+					margin: 0 .2rem;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+.beibei1{
+	height:  px2rem(182);
+	width:  px2rem(157);
+	position: absolute;
+	z-index: 2;
+	left: .5rem;
+	top: .2rem; 
+	animation: beibei1 .8s linear 1s infinite alternate running;
+}
+.beibei2{
+	height:  px2rem(182);
+	width:  px2rem(179);
+	position: absolute;
+	z-index: 2;
+	right: .5rem;
+	top: .2rem; 
+	animation: beibei2 1s linear 1s infinite alternate running;
+}
+.beibei3{
+	height:  px2rem(182);
+	width:  px2rem(179);
+	position: absolute;
+	z-index: 2;
+	left: -.5rem;
+	top: px2rem(711);
+	animation: beibei3 1s linear 1s infinite alternate running;
+}
+.beibei4{
+	height:  px2rem(182);
+	width:  px2rem(179);
+	position: absolute;
+	z-index: 2;
+	right: -1.5rem;
+	top: px2rem(751);
+	animation: beibei4 .5s linear 1s infinite alternate running;
+}
+.cbutton{ 
+	position: absolute;
+	top: px2rem(675);
+	left: px2rem(130);
+	width: px2rem(363);
+	height: px2rem(125);
+	background: url(../images/wangling/wl_17.png) no-repeat;
+	background-size: 100% 100%;
+	line-height: px2rem(125);
+	text-align: center;
+	color: #333;
+	b{
+		font-size: .9rem;
+		color: #fff;
+	} 
+}
+.cbutton.disable{background: url(../images/wangling/wl_22.png) no-repeat;
+background-size: 100% 100%;}
+.zsjc{
+	position: absolute;
+	top: px2rem(831);
+	left: px2rem(55);
+	width: px2rem(537);
+	height: px2rem(231);
+	z-index:6;
+	background: url(../images/wangling/wl_14.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	p{
+		color:#5a2c0b;
+		padding:2.5rem 1rem 0 1rem;
+		font-size:.6rem;
+		}
+	}
+	
+	@keyframes beibei1
+{
+
+0%  {top:.5rem; left:.6rem}
+100%  {top:.1rem; left:.8rem}
+
+}
+	@keyframes beibei2
+{
+
+0%  { right: .4rem;
+	top: .4rem; }
+100%  { right: .6rem;
+	top: .4rem; }
+
+}
+	@keyframes beibei3
+{
+
+0%  {left: -.5rem;
+	top: px2rem(701); }
+100%  {left: -.5rem;
+	top: px2rem(721); }
+
+}
+	@keyframes beibei4
+{
+
+0%  {right: -1rem;
+	top: px2rem(751);}
+100%  {right: -.8rem;
+	top: px2rem(761);}
+
+}

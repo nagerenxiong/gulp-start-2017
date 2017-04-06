@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HUI买</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../css/sale20170309hq.css">
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+   
+</head>
+
+<body style="background: #fff;" >
+     <div class="top">
+      <div class="top-wrap">
+          <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+          <h1>优惠券详情</h1>
+      </div>
+     </div>
+       <div class="bg10"></div>
+          <div class="yh-card">
+          <a href="#" class="yh-card-l"><img src="../images/sale/sale-img02.png"></a>
+          <a  href="#" class="yh-card-m"><h4>线上订单使用券名称</h4><p class="yh-card-p"><span>50</span>限千元机使用</p></a>
+          <div class="yh-card-r yh-card-r1">
+            <div class="myCanvas"><div class="myCanvas-div"><canvas id="myCanvas" width="100px" height="100" ></canvas></div></div>
+            <div class="pos-rel">
+             <p class="yh-card-r-p"><span>已抢</span><br>66%</p>
+          
+            </div>
+              
+          </div>
+     </div>  
+       <div class="bg10"></div> 
+      <div class="kqsm">
+          <div class="kqsm-title ">卡券说明</div>
+          <div class="kqsm-con">
+               <p>1、XXXXXXXXX</p>
+               <p>2、XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+               <p>3、XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+          </div>
+      </div>
+      <div class="yhq-bottom">
+           <div class="yhq-bottom-fixed js_ljsy" ><a href="#">立即领取</a></div>
+      </div>
+     <!-- 背景 -->
+    <!--  <div id="model-mask" ></div> -->
+      <!-- 弹框 一次 -->
+      <!-- <div class="dialog_bottom" id="dialog_bottom" name="dialog">
+    <ul>
+        <li><span>手机号码：</span><em>15180198551</em></li>
+        <li><span>办理业务：</span><em class="r">省内</em></li>
+        <li><span>支付金额：</span><em class="r">49.9元</em></li>
+        <li><span>支付方式：</span><em>话费支付</em></li>
+        <li><span>生效时间：</span><em>立即生效，限当月使用</em></li>
+        <li class="reade_box"><i class="on"></i><span class="read">我已阅读使用帮助和</span><a href="#" target="_blank" style="color: #0399df">电子协议</a></li>
+    </ul>
+    <div class="chang_btn_box"><a href="#" class="confirm_btn js_sure"  >确认办理</a></div>
+    <i class="close_btn"></i>
+ </div> -->
+       <!-- 弹框二次 -->
+ <!-- <div class="dialog_center" id="dialog_center1" name="dialog">
+    <h3>业务已受理</h3>
+    <p>具体受理结果以10086短信为准 </p>
+    <a href="javascript:void(0)" class="know_btn">我知道了</a>
+    <i class="close_btn"></i>
+</div> -->
+<div class="dialog_bg" name="dialog"></div>
+</body>
+  <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+
+<!--   <script type="text/javascript">
+     $(function(){
+      $(".js_ljsy").click(function(){
+         $("#dialog_bottom").slideDown(200);  
+         $("#model-mask").show();    
+      });
+      $(".close_btn").click(function(){
+         $("div[name='dialog']").hide();
+         $("#model-mask").hide();
+      });
+        $(".js_sure").click(function(){
+           $("#dialog_bottom").hide();  
+         $("#dialog_center1").show();  
+         $("#model-mask").show();    
+      });
+
+ })
+  </script> -->
+<script type="text/javascript">
+  //扇形
+     CanvasRenderingContext2D.prototype.sector = function(x,y,r,angle1,angle2){
+            this.save();
+            this.beginPath();
+            this.moveTo(x,y);
+            this.arc(x,y,r,angle1*Math.PI/180,angle2*Math.PI/180,false);
+            this.closePath();    
+            this.restore();
+            return this;
+        }
+       var canvas = document.getElementById("myCanvas");
+       var ctx = canvas.getContext("2d"); 
+        ctx.fillStyle = '#628ea8';
+        ctx.sector(50,50,45,0,270).fill();
+        ctx.fillStyle = '#fff';
+        ctx.sector(50,50,45,0,230).fill();
+        ctx.fillStyle = '#8dcbf1';
+        ctx.sector(50,50,37,0,360).fill();
+</script>
+
+
+</html>
+

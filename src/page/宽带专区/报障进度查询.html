@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安装进度查询</title>
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="../../css/kuandai20170329xyy.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        @@include('../../component/top/nav.html',{"title":"报障进度查询"})
+        <div class="content-kuandai">
+            <img src="../../images/kuandai/icon-bzjdcx.png" class="img" />
+            <p class="p1">当前进度</p>
+            <p class="p3">上门排查</p>
+            <p class="p2">上门时间：2017年8月29日</p>
+        </div>
+        <div class="content1-kuandai">
+            <div class="green">
+                <i class="font-gou"></i><i class="font-1" style="display: none"></i><span class="title">报障工单提交</span>
+                <span
+                    class="time">2016-09-10 10:32:11</span>
+                    <div class="line"></div>
+            </div>
+            <div class="green">
+                <i class="font-gou "></i><i class="font-2" style="display: none"></i><span class="title">客服接单预处理</span>
+            </div>
+            <div class="org">
+                <i class="font-naozhongtixing "></i><i class="font-3" style="display: none"></i><span class="title">上门排障</span>
+                <i
+                    class="huiicon font-shang1"></i>
+                    <ul class="list-smaz">
+                        <li><i class="font-yuandian1"></i><span>【预约上门】</span>
+                            <p>预约人员：刘师傅 13879111187</p>
+                        </li>
+                        <li><i class="font-yuandian1"></i><span>【上门排障】</span>
+                            <p>排障人员：刘师傅 13879111187</p>
+                        </li>
+                        <li class="gray"><i class="font-yuandian1"></i><span>【完成排障】</span></li>
+                    </ul>
+                    <div class="line"></div>
+            </div>
+            <div class="gray">
+                <i class="font-4 "></i><span class="title">完成订单<a href="#" class="link">去评价</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".top-icon-right").click(function () {
+            $(".top .top-nav-slide").slideToggle(20);
+            $(".center-top .top-nav-slidee").slideToggle(20);
+            $(".tip-search .top-nav-slide").hide();
+            $(".modal-bg").toggle();
+        });
+
+        $(".modal-bg").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+        $(".top-nav-arrow").click(function () {
+            $(".top .top-nav-slide").slideUp(20);
+            $(".center-top .top-nav-slide").slideUp(20);
+            $(".modal-bg").hide();
+        });
+    </script>
+</body>
+
+</html>

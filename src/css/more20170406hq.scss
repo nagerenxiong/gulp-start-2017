@@ -1,0 +1,37 @@
+@import "common";
+@mixin mt20{margin-top:px2rem(20)}
+@import "../component/top/index";
+body{background-color:#eee; font-size: px2rem(24); color: #333;  font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif;}
+
+.more-items{margin-top: px2rem(20); background: #fff; overflow: hidden;padding-bottom: px2rem(20);}
+.more-items h4 {font-weight: normal; height: px2rem(90); line-height: px2rem(90); color: #333; font-size: px2rem(28); padding:0 px2rem(20)}
+.more-item{width: 25%; float: left; text-align: center; padding:px2rem(8) 0 px2rem(15) 0; }
+.more-item span{ display: block; font-size: px2rem(24); color: #333;text-align: center;}
+.more-item b{background: url(../images/hui-more-icon.png) no-repeat; background-size: 400% 800%;height: px2rem(60); width: px2rem(60);display: inline-block;}
+.more-item1 b{background-size: 400% 800%; background-position: 0% 0%; background-size: 400% 800%;}
+.more-item2 b{background-size: 400% 800%; background-position: 33.333% 0%; background-size: 400% 800%;}
+.more-item3 b{background-size: 400% 800%; background-position:  66.667% 0%; background-size: 400% 800%;}
+.more-item4 b{background-size: 400% 800%; background-position:  100% 0%; background-size: 400% 800%;}
+.more-item5 b{background-size: 400% 800%; background-position: 0% 14.28571% ;  background-size: 400% 800%;}
+.more-item6 b{background-size: 400% 800%; background-position: 33.333% 14.28571% ;background-size: 400% 800%; }
+.more-item7 b{background-size: 400% 800%; background-position: 66.667% 14.28571% ; background-size: 400% 800%;}
+.more-item8 b{background-size: 400% 800%; background-position:  100% 14.28571% ; background-size: 400% 800%;}
+.more-item9 b{background-size: 400% 800%; background-position: 0%  28.57142% ; background-size: 400% 800%;}
+.more-item10 b{background-size: 400% 800%; background-position:  33.333% 28.57142%;  background-size: 400% 800%;}
+.more-item11 b{background-size: 400% 800%; background-position: 66.667% 28.57142% ;  background-size: 400% 800%;}
+.more-item12 b{background-size: 400% 800%; background-position: 100% 28.57142% ; background-size: 400% 800%;}
+.more-item13 b{background-size: 400% 800%; background-position: 0% 42.85714% ;  background-size: 400% 800%;}
+.more-item14 b{background-size: 400% 800%; background-position: 33.333% 42.85714% ;  background-size: 400% 800%;}
+.more-item15 b{background-size: 400% 800%; background-position: 66.667% 42.85714% ;  background-size: 400% 800%;}
+.more-item16 b{background-size: 400% 800%; background-position: 100% 42.85714% ; background-size: 400% 800%; }
+.more-item17 b{background-size: 400% 800%; background-position: 0% 57.142857% ;  background-size: 400% 800%;}
+.more-item18 b{background-size: 400% 800%; background-position: 33.333% 57.142857% ; background-size: 400% 800%;}
+.more-item19 b{background-size: 400% 800%; background-position: 66.667% 57.142857% ; background-size: 400% 800%; }
+.more-item20 b{background-size: 400% 800%; background-position: 100% 57.142857% ;  background-size: 400% 800%;}
+.more-item21 b{background-size: 400% 800%; background-position: 0% 1.428571% ;  background-size: 400% 800%;}
+.more-item22 b{background-size: 400% 800%; background-position: 33.333% 71.428571% ; background-size: 400% 800%; }
+.more-item23 b{background-size: 400% 800%; background-position: 66.667% 71.428571% ; background-size: 400% 800%; }
+.more-item24 b{background-size: 400% 800%; background-position: 100% 71.428571% ; background-size: 400% 800%; }
+
+
+

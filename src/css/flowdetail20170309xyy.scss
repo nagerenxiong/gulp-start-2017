@@ -1,0 +1,164 @@
+@import "common";
+@import "idangerous.swiper2.7.6";
+@mixin mt20 {
+    margin-top:px2rem(20)
+}
+body{
+	background-color:#eee;
+} 
+@import "../component/top/index";
+@import "../component/shop-layout-1and3/index";
+@import "../component/shop-layout-2and2/index";
+@import "../component/shop-layout-1and1/index";
+.content1{
+	background-color:#fff;
+	@include mt20;
+	text-align: center;
+	.title{
+		font-size: px2rem(24);
+		color: #096659;
+		padding-top:px2rem(30);
+	}
+	.num-wrap{
+		color:#096659;
+		.num{
+			font-size: px2rem(90);
+		}
+		.font{
+			font-size: px2rem(24);
+		}
+		.icon{
+			width: px2rem(35);
+			margin-left: px2rem(6);
+			vertical-align: px2rem(5);
+		}
+	}
+	.info{
+		color:#666;
+		font-size: px2rem(24);
+		padding-bottom: px2rem(30);
+		span:first-child{
+			margin-right: px2rem(80);
+		}
+		span:last-child{
+			margin-left: px2rem(80);
+		}
+	}
+}
+.content2{
+	@include mt20;
+	background-color:#fff;
+	.title{
+		background-color:#fff;
+		position:relative;
+		line-height: px2rem(70);
+		border-bottom: 1px solid #dedede;
+		span{
+			font-size: px2rem(28);
+			color:#333;
+			margin-left: px2rem(15);
+			*{
+				vertical-align: middle;
+			}
+		}
+		i{
+			position:absolute;
+			margin-right: px2rem(15);
+			background: url(../images/icon-shang.png) no-repeat center center;
+			background-size: 100% 100%;
+			width:px2rem(24);
+			height:px2rem(12);
+			right: 0;
+			top:50%;
+		    transform: translateY(-50%);
+		}
+	}
+	.title1{
+		line-height: px2rem(70);
+		text-align: right;
+		border-bottom:1px solid #dedede;
+		a{
+			color:#333;
+			font-size: px2rem(24);
+			border-right: 1px solid #939393;
+			padding-right: px2rem(8);
+		}
+		a:last-child{
+			border-right:0;
+		}
+		a.active{
+			color:#eca847;
+		}
+	}
+	.icon-info{
+		width:px2rem(35);
+		margin-right: px2rem(10);
+	}
+}
+.flowdetail-list{
+	padding: px2rem(15);
+	background-color:#fff;
+	li{
+		border-bottom:1px solid #f0f0f0;
+		div{
+			margin-bottom: px2rem(10);
+		}
+	}
+	.flow-title{
+		font-size: px2rem(24);
+		color:#333;
+	}
+	.detail{
+		font-size: px2rem(20);
+		color:#666;
+		span{
+			color:#666;
+		}
+		.surplus{
+			float: right;
+		}
+	}
+	.progress-wrap{
+		background-color:#d9d9d9;
+		width:px2rem(609);
+		height:px2rem(22);
+		border-radius: 15px;
+		overflow: hidden;
+		padding:0 px2rem(5);
+		position:relative;
+		.progress{
+			background:url(../images/progress.png) repeat-x left center;
+			height:px2rem(16);
+			border-radius:15px;
+			margin-top:px2rem(3);
+		}
+		.progress1{
+			background:url(../images/progress1.png) repeat-x left center;
+			height:px2rem(16);
+			border-radius:15px;
+			margin-top:px2rem(3);
+		}
+	}
+}
+.pagination{
+	text-align: center;
+}
+#chart-date{
+	width:16rem;
+	height:px2rem(430);
+	position:absolute;
+	z-index: 5;
+	display: none;
+}
+#chart-month{
+	z-index: 5;
+	visibility:hidden;
+}
+.swiper-slide #chart-month.show-chart{
+	z-index: 10!important;
+	visibility:visible!important;
+}
+.swiper-slide #chart-date.show-chart{
+	z-index: 10!important;
+	display:block!important;
+}

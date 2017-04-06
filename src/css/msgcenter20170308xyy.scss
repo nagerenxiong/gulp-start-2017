@@ -1,0 +1,37 @@
+@import "common";
+
+@mixin mt20 {
+	margin-top: px2rem(20)
+}
+@import "../component/top/index";
+.msg-list{
+	background-color: #fff;
+	border-top: px2rem(20) solid #eee;
+	padding-left: px2rem(36);
+	dl{
+		padding: px2rem(20) 0;
+		border-bottom:1px solid #f6f6f6;
+		dt{
+			font-size: px2rem(28);
+			color: #333;
+			position:relative;
+			span{
+				float: right;
+				font-size: px2rem(18);
+				color:#999;
+				margin-right: px2rem(15);
+			}
+		}
+		dd{
+			color:#666;
+			font-size: px2rem(20);
+		}
+		.circle{
+			position:absolute;
+			width: px2rem(10);
+			top:50%;
+			transform:translateY(-50%);
+			left:px2rem(-20);
+		}
+	}
+}

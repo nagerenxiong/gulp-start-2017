@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>HUI买</title>
+    <link rel="stylesheet" type="text/css" href="../../css/cx20170328hq.css">
+    <script type="text/javascript" src="../../js/hotcss.js"></script>
+   
+</head>
+<body>
+<!-- top start -->
+    @@include('../../component/top/nav.html',{"title":"小HUI"})
+<!-- top end -->
+<!-- main start -->
+  <div class="bg-f8"></div>
+  <div class="cx-index">
+   
+      <img src="../../images/cuxiao/cx-index-bg.jpg">
+      <div class="cx-index-top">
+           <div class="cx-index-head"><img src="../../images/cuxiao/cx-index-head.jpg" alt=""></div>
+           <p>钻石王老五</p>
+           <p>15188886666</p>
+      </div>
+      <div class="xc-sy">
+           <p><span>昨日收益</span></p>
+           <div class="cx-sy-con">¥<span> 188.88</span></div>
+           <p><span>累计收益：</span>¥ 666.66</p>
+      </div>
+      <div class="cx-index-icon">
+            <ul>
+                 <li><a href="#"><img src="../../images/cuxiao/cx-xx.png"><span>查信息</span></a></li>
+                 <li><a href="#"><img src="../../images/cuxiao/cx-gg.png"><span>发广告</span></a></li>
+                 <li><a href="#"><img src="../../images/cuxiao/cx-sy.png"><span>看收益</span></a></li>
+            </ul>
+      </div>
+  </div>
+  <div class="bg-f8"></div>
+  <div><a href="#"><img src="../../images/cuxiao/cx-banner.jpg"></a></div>
+<!-- main end-->
+</body>
+ <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+         $(function(){
+
+             //top 下拉js
+             $(".top-icon-right").click(function() {
+  $(".top .top-nav-slide").slideToggle(20);
+  $(".center-top .top-nav-slidee").slideToggle(20);
+  $(".tip-search .top-nav-slide").hide();
+  $(".modal-bg").toggle();
+});
+
+$(".modal-bg").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+$(".top-nav-arrow").click(function() {
+  $(".top .top-nav-slide").slideUp(20);
+  $(".center-top .top-nav-slide").slideUp(20);
+  $(".modal-bg").hide();
+});
+
+         })
+
+      </script>
+</html>

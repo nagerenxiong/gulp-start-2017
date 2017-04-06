@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>话费充值</title>
+      <link rel="stylesheet" type="text/css" href="../css/chongzhi20170310zx.css">
+</head>
+
+<body>
+    <div class="top container">
+        <div class="header sub-title"> 
+            <!--<a class="icon-left icon-home icon2"></a>-->
+            <a onclick="window.history.back()" href="javascript:void(0)" class="icon-left"></a>
+            <h1>话费充值</h1>
+            <a class="icon-right icon-lr02"></a>
+           <ul class="nav-slide">
+    	<li class="nav-arrow"></li>
+    	<li><a href="/hui/release/home/index.html"><i class="icon-nav-home"></i>首页</a></li>
+	    <li><a href="/hui/shopFinds/init"><i class="icon-nav-zd"></i>找店</a></li>
+	    <li><a href="/hui/shua/index"><i class="icon-nav-sys"></i>转转贝</a></li>
+	    <li><a href="/hui/flow/queryGprs"><i class="icon-nav-llian"></i>流量</a></li>
+	    <li><a href="/hui/user/usercenter/showUserCenter"><i class="icon-nav-wo"></i>我</a></li>
+  	</ul>
+            <div class="modal-bg"></div>
+        </div>
+    </div>
+    <div class="container empty-cart empty-box pd-t45">
+        <!-- <div class=" dobussnes-name"><span class="">*东 可用余额为： <span class="red">13.00</span> 元</span></div> -->
+        <div class="input-box q-huafei">
+            <label class="input-gjz ">江西南昌</label>
+            <!--判断归属地 隐藏加 hide -->
+            <input type="text" id="phonenmb" class="cz-input gray-hs" maxlength="11" placeholder="请输入手机号码" value="139 7637 8873">
+            <!-- 默认登录的手机号码，并缓存储存-->
+        </div>
+        <div class="q-tishi pdlr-10">
+            <span class="fl red fs12">请输入江西移动号码</span>
+            <!-- 归属地不对 隐藏加 hide-->
+            <span class="fr fs12 font-gray">**涛<span class="mgl-5">欠费<span class="red">100.00</span>元</span>
+            </span>
+            <!-- 欠费 隐藏加hide -->
+        </div>
+        <div class="valid ">
+            <div class="boxes dobussnes-hf q-boxes" id="boxes1">
+                <div class="box J_ping ">
+                    <div class="title ">
+                        <label> 50元 </label>
+                    </div>
+                </div>
+                <div class="box J_ping  curr">
+                    <div class="title">
+                        <label> 100元 </label>
+                    </div>
+                </div>
+                <div class="box J_ping ">
+                    <div class="title">
+                        <label> 200元 </label>
+                    </div>
+                </div>
+                <div class="box J_ping ">
+                    <div class="title">
+                        <label> 300元 </label>
+                    </div>
+                </div>
+                <div class="box J_ping ">
+                    <div class="title">
+                        <label> 500元 </label>
+                    </div>
+                </div>
+                <div class="box J_ping nocurr">
+                    <div class="title">
+                        <input class="bussnes-input" name="" type="text" placeholder="其他"> </div>
+                </div>
+            </div>
+            <p class="q-jine red mgt-3 fs12">充值金额最低10元，最高1000元</p>
+        </div>
+        <div class=" q-yhline yhline "><span class="font-gray">优惠券<a class=" hua-feiq sum font-gray">5元话费券<!-- select name="" dir="rtl" class="select-yhq">
+  <option>5元话费券</option>
+  <option>3元话费券</option>
+  <option>不选优惠券</option>
+</select> --></a><i class="icon-default06 pull-right"></i></span></div>
+        <!-- <div class="yhline "><a>优惠券<span class="fr q-wuyouhuiq">没有优惠券，快去唰一唰</span><i class="icon-default06 pull-right"></i></a></div> -->
+        <!-- 无优惠券内容 切换由hide控制-->
+        <!-- <div class="dobussnes-price fr cl pdt-0 font-gray">您有一张<span class="red">5元</span>优惠券 <span class="mbl-15">单笔充值</span><span class="red"> 300元</span>可使用</div>  额外优惠券 隐藏加 hide -->
+        <!-- <div class="dobussnes-price cl">支付金额：<span class="red">¥<span class="fz-16">100</span>.00</span>元 <span class="mbl-15">实际到账：</span><span class="red"> ¥<span class="fz-16">105</span>.00</span>元</div> -->
+        <div class="dobussnes-price cl fr font-gray fs12"><span class="mbl-15 ">实际到账：</span><span class="red"> ¥<span class="fz-16">105</span>.00</span>元</div>
+        <!--立即充值 start-->
+        <div class="zp-btn mgt-40 pdb-0 pay-choose">
+            <a class="btn btn-yelow btn-block fs18">立即支付：<span class=" mgl-5"><span class=" fs16">¥100.00</span></span></a> </div>
+        <!--不可点击样式 把"btn-yelow" 改成"btn-disabled" -->
+        <!--立即充值 end-->
+        <div class="cz-text">
+        	 <a href="##" class="">亲密充</a><span class="sline"></span>
+        	  <a href="##" class="">永不停机</a><span class="sline"></span>
+        	 <a href="##" class="">充值记录</a><span class="sline"></span>
+            <a class="" href="#czsm" id="czsm">充值说明</a>
+           
+            <div class="cz-text-main font-gray">
+                <p>1.充值限额：单个号码每笔最多充值1000元。具体网上支付的额度是否支持，由客户的发卡银行决定。</p>
+                <p>2.发票补打：您可凭手机号码与服务密码至指定营业厅对近3个月的发票进行补打。</p>
+                <p>3.到账时间：扣款成功后，所充值金额一般将于10分钟左右到账，遇系统繁忙等情况可能会存在延时到账，您可至网上营业厅"充值缴费记录"中查询。</p>
+                <p>4.充值未到账：您的充值如未成功，相关银行卡的退款将在受理后的7个工作日内到账。</p>
+                <p>5.掌厅充值交费不能撤销或退费，请您仔细核对充值号码及充值金额，谢谢。</p>
+                <p>6、目前暂不支持一卡付费用户交费，请一卡付费用户前往附近移动营业厅交费。</p>
+            </div>
+        </div>
+    </div>
+    <!--立即支付弹框 start-->
+    <div class="share-box share-sum">
+        <a class="cancel close-btn close-btn1"></a>
+        <div class="share-content share-content1 ">
+            <h2>选择优惠券</h2>
+            <div class="pdlr-10 share-content2">
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">2元话费券</span>
+                        <span class="dis-block font-gray1 ">单笔充值满100元时使用</span>
+                        <span class="font-gray dis-block fs12 pdt-3">使用期限：2016.04.11-2016.04.12</span>
+                    </div>
+                    <div class="fr pdt-20"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">2元话费券</span>
+                        <span class="dis-block font-gray1 ">单笔充值满100元时使用</span>
+                        <span class="font-gray dis-block fs12 pdt-3">使用期限：2016.04.11-2016.04.12</span>
+                    </div>
+                    <div class="fr pdt-20"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">2元话费券</span>
+                        <span class="dis-block font-gray1 ">单笔充值满100元时使用</span>
+                        <span class="font-gray dis-block fs12 pdt-3">使用期限：2016.04.11-2016.04.12</span>
+                    </div>
+                    <div class="fr pdt-20"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">2元话费券</span>
+                        <span class="dis-block font-gray1 ">单笔充值满100元时使用</span>
+                        <span class="font-gray dis-block fs12 pdt-3">使用期限：2016.04.11-2016.04.12</span>
+                    </div>
+                    <div class="fr pdt-20"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">2元话费券</span>
+                        <span class="dis-block font-gray1 ">单笔充值满100元时使用</span>
+                        <span class="font-gray dis-block fs12 pdt-3">使用期限：2016.04.11-2016.04.12</span>
+                    </div>
+                    <div class="fr pdt-20"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <div class="mgtb-10 pdtb-10 border-e7-b yhq-p">
+                    <div class="fl">
+                        <span class="fs16 dis-block">不使用话费券</span>
+                    </div>
+                    <div class="fr"><span class="mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></div>
+                </div>
+                <!-- <p class="mgtb-10 pdlr-10"><span class="fs16 ">不使用话费券</span> <span class="fr mgt-5"><input type="radio" class="mgr-0" name="hfq"></span></p>    -->
+            </div>
+            <div class="yhline pdlr-10"><a href="##" class="btn btn-blue btn-block center-btn  cancel">确定</a></div>
+        </div>
+    </div>
+    <!--实名制验证 start-->
+    <div class="showboxtop " style="display: none;">
+        <h4 class=""> 尊敬的客户：</h4>
+        <p class=" mgt-10">
+            &nbsp;&nbsp;&nbsp;&nbsp;根据国家反恐怖主义法及公安部、工信部的相关规定，所有电话用户必须实名！
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp; 因您的信息不全（不准）导致您还是非实名客户，目前暂无法交费，请您在10月30日前持身份证到营业厅或通过"中国移动10086"微信公众号进行实名登记（关注"中国移动10086"微信公众号并关联手机号码，点击"我要办理--实名补登记"）。
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;非实名的通信号码/通信账号从2016年11月起将被停止通信服务。
+        </p>
+        <p class=" text-right">中国移动通信集团江西有限公司
+            <br/> 2016年9月
+        </p>
+        <p></p>
+        <a class="btn btn-yelow btn-block ">我知道</a>
+    </div>
+    <div class="ggl_modal_box"  style="display: none;">
+        <div class="ggl_modal">
+        <div class="m">
+            <div class="ggl_con">
+                <div class="prize on" >
+                    <img id="robot" src="../images/ggl/prize1.png" />
+                    <div class="font">
+                        ￥<em>5</em>元优惠券
+                    </div>
+                    <div class="font1">
+                        使用期限：2016.12.25~2017.1.25
+                    </div>
+                    <div class="font3">
+                        限单笔充值XX元时使用
+                    </div>
+                </div>
+                <div class="noprize">
+                    <img id="robot" src="../images/ggl/prize2.png" />
+                    <div class="font2"><p>空空如也</p><p>下次再来试试吧</p></div>
+                </div>
+                <img id="redux" src="../images/ggl/prize.png" />
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="use_btn"><img src="../images/ggl/ggl_btn.png" /></a>
+        <!-- <a href="javascript:void(0)" class="use_btn"><img src="../images/ggl/ggl_btn1.png" /></a> -->
+        <img src="../images/ggl/xx.png" class="close" />
+    </div>
+    </div>
+    <!--实名制验证 start-->
+    <!--立即支付弹框 start-->
+    <div class="pay-box pay-sum  ">
+        <a class="cancel close-btn q-close-btn"></a>
+        <div class="share-content q-share-content">
+            <h2>选择支付方式</h2>
+            <ul class="pay-way-li">
+                <a class="pay-way pay-ali"><i></i><span>支付宝支付</span><b class="fr"></b></a>
+                <a class="pay-way  pay-wechat mgt-10"><i></i><span>微信支付</span><b></b></a>
+            </ul>
+        </div>
+    </div>
+    <div class="more-box"></div>
+    <div class="more-box_ggl "></div>
+    <!--立即支付弹框 end-->
+    <!--立即支付弹框 end-->
+    <!--立即支付弹框 start-->
+    <!-- <div class="share-box share-sum">
+  <a class="cancel close-btn"></a>
+
+  <div class="share-content">
+   <h2>支付详情</h2>
+     <p class="mgt-10"><span class="sum-tleft">充值号码：</span>139347463737</p>    
+     <p><span class="sum-tleft">到账金额：</span><b class="">105</b>元</p>
+     <p><span class="sum-tleft">支付金额：</span><b class="red">100</b>元</p>
+     <div class="yhline"><a href="##" class="btn btn-blue btn-block center-btn">确定</a></div>
+  </div>
+</div>
+<div class="more-box"></div> -->
+    <!--立即支付弹框 end-->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script src='../js/chongzhi-zx.js' type='text/javascript'></script>
+    <script language=javascript>
+    $('#redux').eraser({
+        progressFunction: function(e) {
+            if (e >= 0.6) {
+                $(".use_btn").show();
+            }
+        }
+    });
+    $(".use_btn").click(function() {
+        $(".ggl_modal").hide();
+        $(".more-box_ggl").removeClass("on");
+    })
+    $(".close").click(function() {
+        $(".ggl_modal").hide();
+        $(".more-box_ggl").removeClass("on");
+    })
+    $(".q-close-btn").click(function() {
+        $(".pay-box").slideUp('fast');
+        $(".more-box").removeClass("on");
+    });
+    $(".pay-choose").click(function() {
+        $(".pay-box").slideDown('fast');
+        $(".more-box").addClass("on");
+    });
+
+    $(".showboxtop .btn").click(function() {
+        $(".showboxtop").hide();
+        $(".more-box").removeClass("on");
+    });
+    </script>
+</body>
+
+</html>
